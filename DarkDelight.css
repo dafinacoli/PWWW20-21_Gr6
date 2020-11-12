@@ -1,0 +1,46 @@
+#header{
+    background-color: black;
+    display: flex;
+    justify-content:space-between;
+}
+#logo h1{
+    color: white;
+    margin-bottom: 0%;
+    padding-top: 0%;
+}
+
+#logo h6{
+    color: gray;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+#socialMedia{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
+
+#search{
+    background-color: rgb(210, 66, 96);
+    border-radius: 40px;
+    border-color: black;
+}
+#nav{
+   
+        background-image: linear-gradient(rgb(58, 56, 57),rgb(8, 8, 8));
+        height: 50px;
+        
+}
+
+nav, a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+body{
+    background-color: black;
+} 
