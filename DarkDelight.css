@@ -45,19 +45,12 @@ body{
     background-color: black;
 } 
 
-.leftpane {
-    width: 25%;
-    height: 100%;
-}
-
-.middlepane {
-    width: 25%;
-    height: 100%;
-}
-
+.leftpane, 
+.middlepane, 
 .rightpane {
-  width: 25%;
-  height: 100%;
+  width: 33.33%;
+  float: left;
+  height: 100px;
 }
 .media-body{
     color: grey;
