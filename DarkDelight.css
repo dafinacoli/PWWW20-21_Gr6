@@ -23,7 +23,7 @@
 
 
 #search{
-    background-color: rgb(210, 66, 96);
+    background-color: #d24260;
     border-radius: 40px;
     border-color: black;
 }
@@ -44,3 +44,27 @@ nav, a{
 body{
     background-color: black;
 } 
+
+.leftpane {
+    width: 25%;
+    height: 100%;
+}
+
+.middlepane {
+    width: 25%;
+    height: 100%;
+}
+
+.rightpane {
+  width: 25%;
+  height: 100%;
+}
+.media-body{
+    color: grey;
+}
+
+.float-right{
+    color:#d24260;
+}
+
+h4 {color: white;}
