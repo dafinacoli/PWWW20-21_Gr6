@@ -45,13 +45,21 @@ body{
     background-color: black;
 } 
 
-.leftpane, 
-.middlepane, 
-.rightpane {
+.row { height: 150px; margin-bottom: 400px; position: relative; }
+.row p {color: grey;}
+.row b {color: #d24260;}
+
+.leftpane, .middlepane, .rightpane {
   width: 33.33%;
   float: left;
   height: 100px;
 }
+
+.col1, .col2, .col3, .col4{
+    float: left;
+    width: 250px;
+}
+
 .media-body{
     color: grey;
 }
