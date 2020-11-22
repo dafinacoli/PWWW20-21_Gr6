@@ -5,7 +5,6 @@ h4{
 }
 h5{
     font-size: 16px;
-    line-height:19.2px;
     margin-top:25px;
 }
 
@@ -24,19 +23,38 @@ nav, a{
 
 body{
     background-color: black;
+    border-top: 10px solid #d24260;
+    margin: 0 auto;
+    width: 1000px;
 } 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 1em 0;
+    padding: 0;
+}
+header nav a     {
+    text-decoration: none;
+    font-size: 13px;
+    padding: 20px 10px 33px 10px;
+    display: inline-block;
+    }
+header nav a:hover {
+      color:  #d24260;
+      }
 #header{
-    background-color:black;
+    background-color: black;
     display: flex;
     justify-content:space-between;
-    margin-left: 275px;
-    margin-right: 275px;
     height: 140px;
+    padding: 0px 20px;
 }
 #logo h1{
     color: white;
-    margin-bottom: 0%;
-    padding-top: 0%;
+    margin: 40px 0px 0px 0px;
+    float: left;
 }
 
 #logo h6{
@@ -56,14 +74,12 @@ body{
     border-color: black;
 }
 #nav{
-   
-    background-color: #000000;
-    background-image: -webkit-gradient(linear,left top, left bottom,from(#3a383f),to(#0f0f0f));
+    background-image: gradient(linear,left top, left bottom,from(#3a383f),to(#0f0f0f));
     background-image: linear-gradient(#3a383f,#0f0f0f);
     height: 60px;
-    margin-left: 275px;
-    margin-right: 275px;
     margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .row {  
@@ -73,19 +89,9 @@ body{
     }
 #row1 {
     height: 520px;
-    margin-left: 275px;
-    margin-left: 275px;
-    position: relative;
+    margin-left: 20px;
+    margin-left: 20px;
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #333;
-    margin: 1em 0;
-    padding: 0;
-}
-
 #leftpane {
     width: 300px;
     float: left;
