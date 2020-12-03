@@ -1,0 +1,104 @@
+#service{
+    position: relative;
+    background-image: url(images/skincare.jpg);
+    height: 406px;
+    margin-bottom: 0px;
+}
+
+#service h1{
+    
+    color:#3a383f;
+    padding: 40px 0px 0px 180px;
+}
+
+#p p{
+    font-family: Snell Roundhand, cursive;
+    font-size: 100px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+
+    color: rgb(185, 185, 185)
+}
+
+#service h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    color: #d24260;
+}
+
+.pershkrim{
+    color: rgb(97, 97, 97);
+    margin-top: 0px;
+    padding-left: 10px
+}
+
+/* stilizimi i pjeses se make-up and tinting */
+#makeup{
+    position: relative;
+    margin: 0px;
+    background-image: url(images/tinting2.png);
+    height: 488px;
+    
+}
+
+#tinting{
+    margin-top: 0px;
+    margin-left: 400px;
+    padding-left: 120px;
+}
+
+#makeup h1{
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-left: 100px;
+  color: #3a383f;
+}
+
+.nentitull{
+    margin-bottom: 0px;
+    color:#3a383f;
+   
+}
+
+.paragraf{
+   margin-top: 10px;
+   color: rgb(97, 97, 97);
+}  
+
+hr{
+    height: 1px;
+        background-color:#d24260;
+        border: none;
+}
+
+
+/* stilizimi i pjeses se eye lash extensions */
+#eyelash{
+    position: relative;
+    background-image: url(images/eyelash.jpg);
+    height: 310px;
+}
+
+#extension{
+    position: relative;
+    width: 440px ;
+   
+}
+
+#extension h1{
+    padding-left: 70px;
+    padding-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #3a383f;
+    
+}
+
+#extension p{
+    margin-top: 5px ;
+    padding-left: 10px;
+    padding: 20px;
+    color: rgb(97, 97, 97);;
+}
+
