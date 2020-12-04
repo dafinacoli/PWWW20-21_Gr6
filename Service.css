@@ -102,3 +102,71 @@ hr{
     color: rgb(97, 97, 97);;
 }
 
+/* stilizimi i pjeses se skin care */
+
+#skin{
+    position: relative;
+    height: 351px;
+    background-image: url(images/skin.png);
+}
+
+#care{
+    margin-left: 300px;
+}
+
+#care h1{
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-left: 200px;
+    color: #3a383f;
+}
+
+#care p{
+    margin: 30px 40px 0px 40px;
+    padding: 5px;
+    color: rgb(97, 97, 97);
+}
+
+#lista{
+    margin-left: 300px;
+    margin-top: 0px;
+}
+
+#lista h5{
+    color: #3a383f;
+    margin-bottom: 0px;
+    padding-left: 35px;
+    color:#d24260 ;
+}
+
+#lista ul li{
+    color: rgb(97, 97, 97);
+}
+    
+
+
+/* stilizimi i (pjeses) permanent make-up  */
+
+#permanent{
+    position: relative;
+    background-image: url(images/permanent.jpg);
+    height: 325px;
+}
+
+#micro{
+    position: relative;
+    width: 400px;
+}
+
+#micro h1{
+    font-size: 24px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-left: 45px;
+    color: #3a383f;
+}
+
+#micro p{
+    padding-left: 5px;
+    color: rgb(97, 97, 97);
+}
