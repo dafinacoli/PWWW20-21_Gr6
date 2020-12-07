@@ -47,6 +47,20 @@
             </nav>
         </div>
     </header>
+    <div class="slideshow">
+        <div style="position: absolute; right: 0; padding: 2px 30px;">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <img id="sfoto" style="width:960px; height:380px">
+        <div class="pershkrimi">
+          <h3 id="h3">Caption</h3>
+          <p id="p">Let’s get glossed. Get into high glassy shine in lustrous, shimmer and glitter finishes.</p>
+      </div>
+      <a class="para" onclick="nextSlide(-1)">&#10094;</a>
+      <a class="pas" onclick="nextSlide(1)">&#10095;</a>   
+  </div>
 
     <div class="row">
         <div id="row1">
@@ -135,4 +149,34 @@
         </div>
     </div>
 </body>
+<script>
+    var slideIndex = 1;
+    slide(slideIndex);
+    
+    function nextSlide(n) {
+        slide(slideIndex += n);
+    }   
+    function currentSlide(n) {
+        slide(slideIndex = n);
+    }   
+    function slide(n) {
+      var fotot = ["images/cover1.jpg","images/cover2.jpg","images/cover3.jpg"];
+      var h3 = ["26 YEARS OF GIVING A GLAM!","BEST-SELLING EYE SHADOW SHADES","YOUR FOUNDATION FORMULA.YOUR WAY"];
+      var p = ["The glammest highlights, legendary faces and iconic shades from the feel-good history of GLAM.The ultimate destination for lip colour. From high-shine to matte or cream, find the finish you want in an extensive array of all the shades, forms and benefits you crave.","Explore our Eye Shadow formulas to find the best texture and finish for you.Now with 46 new shades.","Get your ultimate fit - in an instant - with our foundation filtering tool."];
+      var i;
+      var dots = document.getElementsByClassName("dot");
+      if (n > fotot.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = fotot.length}
+      
+      var img = document.getElementById("sfoto");
+      img.src = fotot[slideIndex - 1];
+      document.getElementById("h3").innerHTML = h3[slideIndex - 1];
+      document.getElementById("p").innerHTML = p[slideIndex - 1];
+       
+      for (i = 0; i < fotot.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
 </html>
