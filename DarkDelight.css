@@ -1,3 +1,8 @@
+h3{
+    color:#FFF;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
 h4{
     font-size: 26px;
     color:#FFF;
@@ -127,6 +132,56 @@ header nav a:hover {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.slideshow {
+    height: 380px;
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+.para , .pas {
+      position: absolute;
+      cursor: pointer;
+      background-color: transparent;
+      color: gray;
+      background-color: #1b1b1ba1;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 100%;
+      border: 3px solid gray;
+      margin: 190px 30px;
+  }
+.para {left: 0;}
+.pas{right: 0;}
+.para:hover , .pas:hover {background-color: rgba(255, 255, 255, 0.26);}
+.pershkrimi {
+    height: 100px;
+    width: 900px;
+    opacity: 0.5;
+    background-color: black;
+    color: #f2f2f2;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0px;
+    padding: 2px 30px;
+  }
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.active {
+    background-color: transparent;
+    border: 1px solid #bbb;
+  } 
 
 .row {  
         background-color: #1b1b1b;
