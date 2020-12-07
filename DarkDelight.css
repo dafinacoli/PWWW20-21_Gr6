@@ -58,7 +58,13 @@ header nav a:hover {
         float: left;
         list-style: none;
         position: relative;
-        padding-right: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-left: solid  white 1px;
+    }
+
+    #home{
+        border-left: none;
     }
     
     nav ul li a{
@@ -72,9 +78,9 @@ header nav a:hover {
     }
     nav ul li ul li {
         padding: 10px ;
-       margin-left: -34px;
+       margin-left: -56px;
        background-color:#3a383f;
-       width: 100px;
+       width: 97px;
        
     }
     nav ul li:hover ul{
