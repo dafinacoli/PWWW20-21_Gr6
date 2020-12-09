@@ -80,6 +80,7 @@ header nav a:hover {
     nav ul li ul{
         display: none;
         position: absolute;
+        z-index: 1;
     }
     nav ul li ul li {
         padding: 10px ;
@@ -221,7 +222,10 @@ header nav a:hover {
     color:#d24260;
     float:right;
     margin-left:10px;
+    text-decoration: none;
 }
+
+
 #row2 {
     height: 200px;
     margin-left: 20px;
@@ -249,5 +253,9 @@ header nav a:hover {
     height: 120px;
 }
 
+#row2 a{
+    color: #d24260;
+    text-decoration: none;
+}
 
 
