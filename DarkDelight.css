@@ -258,4 +258,14 @@ header nav a:hover {
     text-decoration: none;
 }
 
+.media h5{
+    padding-top: 15px;
+    margin-bottom: 0px;
+    
+}
+
+.media h5 b{
+    padding-left: 10px;
+    
+}
 
