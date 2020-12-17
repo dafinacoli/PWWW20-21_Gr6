@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkDelight</title>
+    <link rel="stylesheet" href="../DarkDelight.css">
+    <link rel="stylesheet" href="firstpage.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <h1>DarkDelight</h1>
+                <h6>Free PSD Website Template</h6>
+            </div>
+    
+            <div id=socialMedia>
+                <a href="#"><img src="" alt="i"></a>
+                <a href="#"><img src="" alt="t"></a>
+                <a href="#"><img src="" alt="p"></a>
+                <a href="#"><img src="" alt="g"></a>
+                <a href="#"><img src="" alt="w"></a>
+                <input id="search" type="text">
+            </div>
+        </div>
+    
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li id="home"><a href="#">home </a> </li> 
+                    <li><a href="#">style demo</a></li>
+                    <li><a href="#">full width</a></li>
+                    <li><a href="#">dropdown</a>
+                        <ul>    
+                            <li><a href="#"  onclick="filterCards('all')">All</a></li>
+                            <li><a href="#"  onclick="filterCards('lips')">Lips</a></li>
+                            <li><a href="#"  onclick="filterCards('eyes')">Eyes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">long text link</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+                <img src="images/macpro_artists.jpg" alt="Norway" style="width:720px; height: 700px;">
+                <div class="text-block">
+                  <dl>
+                        <dt>now</dt><dd>trending</dd>
+                  </dl>
+                  <p id="info1">
+                    REFRESH. RECREATE. REPEAT! Finally, you can find the hottest looks and latest trends from around the globe – all in one place, and in real time! Refresh our feed, recreate your look and repeat regularly to get the looks of tomorrow – today.
+                  </p>
+                  <div class="right">
+                    <input id="butoni" type="button" value="click to explore">
+                    <p id="info2">scroll down...</p>
+                  </div>
+                </div>
+        </div>
+        <hr>
+    </main>
+</body>
+</html>
+
+<script type="text/javascript">
+     document.getElementById("butoni").onclick = function() {  
+            document.getElementById("info2").style.display = "block";
+            document.getElementById("container2").style.display = "block";        
+    }
+    document.getElementById("prova").onclick = function() {  
+            document.getElementById("pr5").style.background = "red";     
+    }
+</script>
