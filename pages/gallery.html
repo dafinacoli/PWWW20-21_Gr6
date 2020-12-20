@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery & Videos</title>
+    <link rel="stylesheet" href="../DarkDelight.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <h1>DarkDelight</h1>
+                <h6>Free PSD Website Template</h6>
+            </div>
+    
+            <div id=socialMedia>
+                <a href="#"><img src="" alt="i"></a>
+                <a href="#"><img src="" alt="t"></a>
+                <a href="#"><img src="" alt="p"></a>
+                <a href="#"><img src="" alt="g"></a>
+                <a href="#"><img src="" alt="w"></a>
+                <input id="search" type="text">
+            </div>
+        </div>
+    
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li id="home"><a href="#">home </a> </li> 
+                    <li><a href="#">style demo</a></li>
+                    <li><a href="#">full width</a></li>
+                    <li><a href="#">dropdown</a>
+                        <ul>    
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Lips</a></li>
+                            <li><a href="#">Eyes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">long text link</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <table id="table1">
+            <tr>
+              <td><img src="images/g1.jpg"></td>
+              <td><img src="images/g2.jpg"></td>
+            </tr>
+            <tr>
+              <td><img src="images/g3.jpg"></td>
+              <td><img src="images/g4.jpg"></td>
+            </tr>
+            <tr>
+                <td><img src="images/g6.jpg"></td>
+                <td><img src="images/g8.jpg"></td>
+            </tr>
+          </table>
+          <hr>
+          <div id="videos">
+            <p id="titulli2">Video</p>
+            <p><b>ALL TYPES. ALL TONES. ALL TEXTURES.<br>STEP-BY-STEP ROUTINES FROM OUR PROS.</b></p>
+            <p>As the skin-positive beauty brand, we don’t just care about your look – we care about your skin. That’s why our pros are getting personal – showing you their own daily routines and go-to products in candid how-to videos.</p>
+                <table id="video">
+                    <tr>
+                      <td><img src="images/y1.jpg" width="420px" onclick="openVideo(1)"></td>
+                      <td><img src="images/y2.jpg" width="420px" onclick="openVideo(2)"></td>
+                    </tr>
+                    <tr>
+                      <td>HOW TO: COVER<br>DARK SPOTS</td>
+                      <td>HOW TO: CONTROL<br>OILY SKIN</td>
+                    </tr>
+                </table>
+          </div>
+
+          <div id="playVideo1" class="shfaqu">
+            <button class="butoniX" onclick="closeVideo(1)">&times;</button>
+            <video id="video1" width="1000px" controls>
+                <source src="video/v1.mp4" type="Video/mp4"/>
+                Shfletuesi juaj nuk perkrah elementin Video.
+            </video>
+          </div>
+          <div id="playVideo2" class="shfaqu">
+            <button class="butoniX" onclick="closeVideo(2)">&times;</button>
+            <video id="video2" width="1000px" controls>
+                <source src="video/v2.mp4" type="Video/mp4"/>
+                Shfletuesi juaj nuk perkrah elementin Video.
+            </video>
+          </div>
+        
+    </main>
+    <script>
+        function openVideo(index) {
+            if(index == 1)
+                document.getElementById("playVideo1").style.height = "100%";
+            else
+                document.getElementById("playVideo2").style.height = "100%";
+        }
+        
+        function closeVideo(index) {
+            if(index == 1) {
+                document.getElementById("playVideo1").style.height = "0%";
+                document.getElementById("video1").pause();
+            }
+            else {
+                document.getElementById("playVideo2").style.height = "0%";
+                document.getElementById("video2").pause();
+            }
+
+        }
+        </script>
+</body>
+</html>
+
