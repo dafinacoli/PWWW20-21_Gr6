@@ -1,0 +1,57 @@
+main {
+    background-color: white;
+    margin: 0 auto;
+    width: 1000px;
+    padding: 20px 0;
+  } 
+  
+  #table1 img {
+    width: 495px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+  #table1 img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+  }
+  #titulli {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
+  #titulli2 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+  }
+  #youtube {
+    margin: 10px 30px;
+    background-color: black;
+    padding: 10px 50px;
+  }
+  p {
+    text-align: center;
+    color:white;
+  }
+  #video img {
+    width: 275px;
+  }
+  #video {
+    color: white;
+    text-align: center;
+  }
+  a{
+    color: #d24260;
+  }
+  a:hover {
+    opacity: 0.7;
+    color: white;
+  }
+  
