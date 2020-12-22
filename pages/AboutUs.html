@@ -7,19 +7,108 @@
     <link rel="stylesheet" href="../DarkDelight.css">
   
  <style>
+#background{
+    height: 1800px;
+   background-color: #1b1b1b;
+}
+
+
+
 #start{
     background-image: url(images/aboutus.jpg);
     height: 427px;
     
 }
 
-#mid{
+#about h1{
+    font-family:Snell Roundhand, cursive;
     text-align: center;
-    color: rgb(250, 182, 241);
-    margin-left: 200px;
-    margin-right: 200px;
+    padding: 150px;
+    font-size: 80px;
+    color: white;
+    }
+
+.mid {
+    text-align: center;
+    color: gray;
+    margin:40px 200px 40px 200px;
     font-size: 18px;
+}
+
+
+.what{
+
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
     
+}
+
+#elementet{
+    display: flex;
+}
+
+    .element{
+  height: 150px;
+  width: 150px;
+  margin: 20px 80px;
+  color: #1b1b1b;
+  background-color: gray;
+  animation-fill-mode: none; 
+  }
+
+  .element:hover{
+  animation-name: stretch;
+  animation-duration: 1s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    background-color: gray;
+  }
+  100% {
+    transform: scale(1.2);
+    background-color: gray;
+    border-radius: 40%;
+  }
+}
+
+.h{
+    font-size: 25px;
+    padding: 20px;
+    color:  #1b1b1b;
+    
+}
+.h:hover{
+    color:  #1b1b1b;
+    text-shadow: 2px  1px 2px #1b1b1b,2px  1px 2px  #1b1b1b,2px  1px 2px  #1b1b1b,2px  1px 2px  #1b1b1b,2px  1px 2px #1b1b1b;
+}
+
+table{
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+
+table td{
+    padding: 20px 150px ;
+    justify-content:space-between;
+    text-align: center;
+    color:  #1b1b1b;
+    margin:40px 200px 40px 200px;
+    font-size: 20px;
+    background-color:gray;
 }
 
 
@@ -65,24 +154,50 @@
             </nav>
         </div>
     </header>
-    <div id="start"></div>
 
-    <div id="mid">
+    <div id="background">
+        <div id="start">
+            <div id="about">
+                <h1>About us</h1>
+            </div>
+        </div>
+  
+
+    <div class="mid">
+        <img src="../images/quatation.png" style="float: left;" alt=""/>
         <p>Proudly born and raised in Los Angeles, DarkDelight Cosmetics is a constantly evolving innovative beauty brand dedicated to bringing you the best in cruelty-free cosmetics.</p>
-  <br>
-   <p>We're all about affordability and inclusivity and encourage our community of beauty enthusiasts to make the most out of makeup. We don't just follow the trends. We create them. Our brand provides endless choices to accommodate our differences. We acknowledge that every single person is unique and we are each in control of our own beauty destiny.</p>
+  
+        <p>We're all about affordability and inclusivity and encourage our community of beauty enthusiasts to make the most out of makeup. We don't just follow the trends. We create them. Our brand provides endless choices to accommodate our differences. We acknowledge that every single person is unique and we are each in control of our own beauty destiny.</p>
+       
     </div>
 
-    <div>
-        <video width="1000px" height="600 px" controls>
-            <source src="images/Flamingo Park _ MAC Cosmetics.mp4" type="video/mp4">
-            
-          Your browser does not support the video tag.
-          </video>
-    </div>
+    <div class="what"><h1>What We Stand For</h1></div>
+ 
+    <div id="elementet">
+    <div class="element"><p class="h">Vegan  Ingredients</p> </div>
+    <div class="element"><p class="h">Rigourous Testing</p></div>
+    <div class="element"><p class="h">Amazing Prices</p></div>
+</div>
 
-  
+<div class="what"><h1>Diversity, Individuality, Creativity</h1></div>
+ 
 
-  
+  <div class="mid">
+    <img src="../images/quatation.png" style="float: left;" alt=""/>
+      <p>Each team member works together to be the catalyst that sparks new evolutions in the beautysphere. Passionate, dedicated, and forward-thinking, we are makeup lovers who all contribute to the innovative products that captivate and inspire our fans.</p>
+  </div>
+
+<div class="what"><h1> Countries We Ship To </h1></div>
+<table>
+    <tr><td>Albania</td><td>Algeria</td></tr>
+    <tr><td>Bahamas</td><td>Canada</td></tr>
+    <tr><td>Estonia</td><td>France</td></tr>
+    <tr><td>Germania</td><td>Kosovo</td></tr>
+    <tr><td>Macedonia</td><td>Turkey</td></tr>
+</table>
+
+
+
+</div>
 </body>
 </html>
