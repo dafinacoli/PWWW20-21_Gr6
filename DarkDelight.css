@@ -196,18 +196,25 @@ header nav a:hover {
 }
 #leftpane {
     width: 300px;
+    height: 520px;
     float: left;
     margin-right: 30px;
+    position: relative;
 }
 #middlepane {
     width: 300px;
+    height: 520px;
     float: left;
     margin-right: 30px;
+    position: relative;
 }
 #rightpane {
     width: 300px;
+    height: 520px;
     float: left;
+    position: relative;
 }
+
 .foto {
     color: #343434;
     font-size: 50px;
@@ -223,6 +230,9 @@ header nav a:hover {
     float:right;
     margin-left:10px;
     text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 
