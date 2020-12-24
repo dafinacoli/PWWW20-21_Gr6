@@ -275,6 +275,23 @@ footer {
     background-color: #1b1b1b;
     color:#999999; 
 }
+.button {
+    background-color: white;
+    border: none;
+    color: #d24260;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0px;
+  }
+.input {
+    width: 100%;
+    background-color: rgb(230, 228, 228);
+    color: #d24260;
+    padding: 6px 10px;
+    margin: 5px 0px;
+    box-sizing: border-box;
+}
 .float-right1{
     float:right;
     margin-left:10px;
