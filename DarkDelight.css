@@ -262,6 +262,58 @@ header nav a:hover {
     width: 225px;
     height: 120px;
 }
+.leftpane1{
+    width: 200px;
+    float: left;
+    margin-right: 50px;
+}
+.leftmiddlepane1 {
+    width: 225px;
+    margin-right: 20px; 
+    float: left;
+}
+.rightmiddlepane1 {
+    width: 225px;
+    margin-right: 20px; 
+    float: left;
+}
+.rightpane1 {
+    width: 225px;
+    float: left;
+}
+footer {  
+    background-color: #1b1b1b;
+    color:#999999; 
+}
+.button {
+    background-color: white;
+    border: none;
+    color: #d24260;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0px;
+  }
+.input {
+    width: 100%;
+    background-color: white;
+    color: #d24260;
+    padding: 6px 10px;
+    margin: 5px 0px;
+    box-sizing: border-box;
+}
+.float-right1{
+    float:right;
+    margin-left:10px;
+}
+#row3 {
+    height: 260px;
+    margin-left: 20px;
+    margin-left: 20px;
+}
+
+
+
 
 #row2 a{
     color: #d24260;
