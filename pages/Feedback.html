@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
-    <link rel="stylesheet" href="DarkDelight.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-  
+    <link rel="stylesheet" href="../DarkDelight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        main {
+            color: white;
+        }
+        #table1 {
+            border-collapse: separate;
+            border-spacing: 50px 50px;
+        }
+        #table2, #table2 th, #table2 td {
+            border: 1px solid white;
+        }
+        #first {
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,7 +43,7 @@
         <div id="nav">
             <nav>
                 <ul>
-                    <li id="home"><a href="DarkDelight.html">home </a> </li> 
+                    <li id="home"><a href="../DarkDelight.html">home </a> </li> 
                     <li><a href="#">style demo</a></li>
                     <li><a href="#">full width</a></li>
                     <li><a href="#">dropdown</a>
@@ -48,6 +61,158 @@
             </nav>
         </div>
     </header>
+    <main>
+        <form method="POST" action="">
+            <fieldset>
+                <legend>help us improve</legend>
+                <table id="table1">
+                    <tr>
+                        <td>
+                            <p>
+                                <label><i class="fa fa-user"></i> Full Name</label><br/>
+                                <input type="text" name="emri" placeholder="Dafina Coli"/>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label><i class="fa fa-envelope"></i> Email</label><br/>
+                                <input type="text" name="email" placeholder="dafina@example.com">
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label>How did you learn about us?</label><br/>
+                                <select name="q1">
+                                    <option>Please select</option>
+                                    <option>Friend or Relative</option>
+                                    <option>Web search engine</option>
+                                    <option>Banner Ad</option>
+                                    <option>Pop-up ad</option>
+                                    <option>Other</option>
+                                </select>
+                        </td>
+                        <td>
+                            <label>Gender?</label><br/>
+                            <select name="q2">
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>    
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="box">
+                                <label>Is this your first visit to the website?</label><br/>
+                                <input type="radio" name="copyright" value="01">Yes<br/>
+                                <input type="radio" name="copyright" value="02">No<br/>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="box">
+                                <label>What factors motivated you to purchase on our site?</label><br/>
+                                <input type="checkbox" name="q3" value="01">Price<br/>
+                                <input type="checkbox" name="q3" value="02">Description of item<br/>
+                                <input type="checkbox" name="q3" value="03">Brand name<br/>
+                                <input type="checkbox" name="q3" value="04">Recommendation<br/>
+                                <input type="checkbox" name="q3" value="05">Other<br/>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <label>Overall, how satisfied are you with our website?</label><br/>
+                                <input type="number" min="1" max="10" name="rate"/>
+                            </p>
+                        </td>
+                        <td>
+                            <label>How often do you buy on our site?</label><br/>
+                                <select name="q1">
+                                    <option>Please select</option>
+                                    <option>Daily</option>
+                                    <option>Once a week</option>
+                                    <option>Twice a week</option>
+                                    <option>Once a month</option>
+                                    <option>Twice a month</option>
+                                    <option>Once a year</option>
+                                    <option>Other</option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>What particular aspect(s) of our website do you like?</label><br/>
+                            <textarea name="description" rows="4" cols="50"
+                            placeholder="Type something ...."></textarea>
+                        </td>
+                        <td>
+                            <label>What particular aspect(s) of our website do you dislike?</label><br/>
+                            <textarea name="description" rows="4" cols="50"
+                            placeholder="Type something ...."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Please rank what you look for in order of importance when selecting products on DarkDelight?</label><br/>
+                            <table id="table2">
+                                <tr>
+                                  <th id="first" style="border: none;"></th>
+                                  <th>Not important</th>
+                                  <th>Maybe</th>
+                                  <th>Very important</th>
+                                </tr>
+                                <tr>
+                                  <td>Quality</td>
+                                  <td><input type="radio" name="copyright" value="01"></td>
+                                  <td><input type="radio" name="copyright" value="01"></td>
+                                  <td><input type="radio" name="copyright" value="01"></td>
+                                </tr>
+                                <tr>
+                                    <td>Cost</td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                </tr>
+                                <tr>
+                                    <td>Brand name</td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                </tr>
+                                <tr>
+                                    <td>Familiarity</td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="copyright" value="01"></td>
+                                </tr>
+                              </table>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="rectangle">
+                                <input type="submit" class="rounded"/>
+                                <input type="reset" value="Pastro" class="rounded"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </fieldset>
+
+
+        </form>
+    </main>
     
 </body>
 </html>
