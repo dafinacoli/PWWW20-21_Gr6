@@ -70,6 +70,7 @@ header nav a:hover {
 
     #home{
         border-left: none;
+        padding-left: 0;
     }
     
     nav ul li a{
@@ -295,11 +296,14 @@ footer {
 .float-right1{
     float:right;
     margin-left:10px;
+    color: #d24260;
+    text-decoration: none;
 }
 #row3 {
     height: 260px;
     margin-left: 20px;
     margin-left: 20px;
+    position: relative;
 }
 
 
@@ -321,3 +325,14 @@ footer {
     
 }
 
+#p1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#p2{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
