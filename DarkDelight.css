@@ -12,20 +12,11 @@ h5{
     font-size: 16px;
     margin-top:25px;
 }
-
 h6{
     font-size: 14px;
     font-weight:700;
     margin-bottom: 5px;
 }
-
-nav a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    
-}
-
 body{
     background-color: black;
     border-top: 10px solid #d24260;
@@ -41,99 +32,28 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-header nav a     {
-    text-decoration: none;
-    font-size: 13px;
-    padding: 20px 10px 33px 10px;
-    display: inline-block;
-    }
-header nav a:hover {
-      color:  #d24260;
-      }
-/* pjesa e shtuar per dropdown */
-      #nav li{
-        list-style: none;
-        display: inline;
-    }
-     
-    nav ul{
-        float: left;
-       
-    }
-    nav ul li{
-        float: left;
-        list-style: none;
-        position: relative;
-        padding-right: 15px;
-        padding-left: 15px;
-        border-left: solid  white 1px;
-    }
-
-    #home{
-        border-left: none;
-        padding-left: 0;
-    }
-    
-    nav ul li a{
-        display: block;
-         text-decoration: none;
-         padding: 5px;
-    }
-    nav ul li ul{
-        display: none;
-        position: absolute;
-        z-index: 1;
-    }
-    nav ul li ul li {
-        padding: 10px ;
-       margin-left: -56px;
-       background-color:#3a383f;
-       width: 97px;
-       
-    }
-    nav ul li:hover ul{
-        display: block;
-        
-    }
-
-
-
-#header{
+/*headeri*/
+#header {
     background-color: black;
     display: flex;
     justify-content:space-between;
     height: 140px;
     padding: 0px 20px;
 }
-#logo h1{
+#logo h1 {
     color: white;
     margin: 40px 0px 0px 0px;
     float: left;
 }
-
-#logo h6{
+#logo h6 {
     color: gray;
     margin-top: 0%;
     padding-top: 0%;
 }
-
 #socialMedia{
-    margin-top: auto;
-    margin-bottom: auto;
-    float:left;
+    float: left;
     margin-right: 20px;
 }
-#search input {   
-    width: 200px;
-    height: 25px;
-    background-color: #d24260;
-    border-radius: 40px;
-    float:right;
-    border: none;
-}
-#search input:focus, #search input.visited {
-    background-color: #d24260;
-} 
 #socialMedia .fa {
     padding: 5px;
     font-size: 15px;
@@ -147,10 +67,19 @@ header nav a:hover {
 .fa:hover, body a:hover {
     opacity: 0.7;
 }
+#search input {   
+    width: 200px;
+    height: 25px;
+    background-color: #d24260;
+    border-radius: 40px;
+    float:right;
+    border: none;
+    padding-left: 10px;
+}
 #search button {
     outline: none;
     position: absolute;
-    margin-left: 170px;
+    margin-left: 180px;
     margin-top: 3px;
     color:white;
     height: 23px;
@@ -159,7 +88,8 @@ header nav a:hover {
     border: none;
     cursor: pointer;
     border-radius: 100%;
-    }
+}
+/* nav */
 #nav{
     background-image: gradient(linear,left top, left bottom,from(#3a383f),to(#0f0f0f));
     background-image: linear-gradient(#3a383f,#0f0f0f);
@@ -168,27 +98,68 @@ header nav a:hover {
     margin-left: 20px;
     margin-right: 20px;
 }
-
+header nav a {
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+}
+header nav a:hover {
+    color: #d24260;
+}
+nav ul{
+    float: left;
+    padding-left: 20px;
+}
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+#home{
+    border-left: none;
+}
+    /*Dropdown*/
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        border-bottom: 1px solid white;
+    }
+    nav ul li ul li {
+       padding: 15px ;
+       margin-left: -41px;
+       width: 43px;
+       background-color: #1b1b1b;
+       border-right: 1px solid rgb(194, 194, 140);;
+       
+    }
+    nav ul li:hover ul{
+        display: block;
+    }
+/*slideshow*/
 .slideshow {
     height: 380px;
     position: relative;
     margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 20px;
-  }
+}
 .para , .pas {
-      position: absolute;
-      cursor: pointer;
-      background-color: transparent;
-      color: gray;
-      background-color: #1b1b1ba1;
-      text-align: center;
-      padding: 8px 16px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 100%;
-      border: 3px solid gray;
-      margin: 190px 30px;
+    position: absolute;
+    cursor: pointer;
+    color: gray;
+    background-color: #1b1b1ba1;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 100%;
+    border: 3px solid gray;
+    margin: 190px 30px;
   }
 .para {left: 0;}
 .pas{right: 0;}
@@ -218,17 +189,21 @@ header nav a:hover {
     background-color: transparent;
     border: 1px solid #bbb;
   } 
-
+/*Permbajtja*/
 .row {  
-        background-color: #1b1b1b;
-        color:#999999;
-        height: 760px; 
-        border-bottom: 4px solid #151513;
-    }
+    background-color: #1b1b1b;
+    color:#999999;
+    height: 760px; 
+    border-bottom: 4px solid #151513;
+}
+.row a {
+    color: #d24260;
+    text-decoration: none;
+}
 #row1 {
     height: 520px;
     margin-left: 20px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 #leftpane {
     width: 300px;
@@ -250,37 +225,40 @@ header nav a:hover {
     float: left;
     position: relative;
 }
-
+.media h5 {
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+.media h5 b{
+    padding-left: 10px;
+}
+/*fotot te row1*/
 .foto {
     color: #343434;
     font-size: 50px;
     width: 64px;
     height: 64px;
     margin-right: 5px;
-}
-.test {
     float: left;
 }
-.float-right{
-    color:#d24260;
+/*Link-at */
+.float-right {
     float:right;
-    margin-left:10px;
     text-decoration: none;
     position: absolute;
     bottom: 0;
     right: 0;
 }
-
-
 #row2 {
     height: 200px;
     margin-left: 20px;
     margin-left: 20px;
 }
-.col1{
+.col1 {
     width: 200px;
     float: left;
-    margin-right: 50px;
+    margin-right: 40px;
+    height: 200px;
 }
 .col1 h4{
     margin: 0px 0px 0px 0px;
@@ -289,34 +267,18 @@ header nav a:hover {
     width: 225px;
     margin-right: 20px; 
     float: left;
+    height: 200px;
 }
 .col3 {
     width: 225px;
     float: left;
+    height: 200px;
 }
 #row2 img {
     width: 225px;
     height: 120px;
 }
-.leftpane1{
-    width: 200px;
-    float: left;
-    margin-right: 50px;
-}
-.leftmiddlepane1 {
-    width: 225px;
-    margin-right: 20px; 
-    float: left;
-}
-.rightmiddlepane1 {
-    width: 225px;
-    margin-right: 20px; 
-    float: left;
-}
-.rightpane1 {
-    width: 225px;
-    float: left;
-}
+/*footeri*/
 footer {  
     background-color: #201e1d;
     color:#999999; 
@@ -325,6 +287,13 @@ footer {
 }
 footer h5 {
     color: rgb(194, 194, 140);
+}
+#row3 {
+    height: 240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    border-bottom: 1px solid #373432;
 }
 footer ul li {
     border-bottom: 1px solid #373432;
@@ -336,11 +305,11 @@ footer ul {
     margin: 0;
     padding: 0;
 }
-footer ul li a{
+footer ul li a {
     color:#999999;
     text-decoration:none;
 }
-footer ul li a:hover{
+footer ul li a:hover {
     color:#d24260;
 }
 .button {
@@ -369,33 +338,4 @@ footer ul li a:hover{
     margin-left:10px;
     color: #d24260;
     text-decoration: none;
-}
-#row3 {
-    height: 260px;
-    margin-left: 20px;
-    margin-left: 20px;
-    position: relative;
-}
-#row2 a{
-    color: #d24260;
-    text-decoration: none;
-}
-.media h5{
-    padding-top: 15px;
-    margin-bottom: 0px;
-    
-}
-.media h5 b{
-    padding-left: 10px;
-    
-}
-#p1{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-#p2{
-    position: absolute;
-    bottom: 0;
-    right: 20px;
 }
