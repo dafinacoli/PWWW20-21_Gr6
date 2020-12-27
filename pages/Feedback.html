@@ -5,22 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
     <link rel="stylesheet" href="../DarkDelight.css">
+    <link rel="stylesheet" href="Feedback.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        main {
-            color: white;
-        }
-        #table1 {
-            border-collapse: separate;
-            border-spacing: 50px 50px;
-        }
-        #table2, #table2 th, #table2 td {
-            border: 1px solid white;
-        }
-        #first {
-            border: none;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -62,21 +48,21 @@
         </div>
     </header>
     <main>
-        <form method="POST" action="">
+        <form method="POST" action="" name="forma">
             <fieldset>
                 <legend>help us improve</legend>
                 <table id="table1">
                     <tr>
                         <td>
                             <p>
-                                <label><i class="fa fa-user"></i> Full Name</label><br/>
-                                <input type="text" name="emri" placeholder="Dafina Coli"/>
+                                <label><i class="fa fa-user"></i> Full Name *</label><br/>
+                                <input type="text" name="emri" placeholder="Dafina Coli" onsubmit="return validateForm()"/>
                             </p>
                         </td>
                         <td>
                             <p>
-                                <label><i class="fa fa-envelope"></i> Email</label><br/>
-                                <input type="text" name="email" placeholder="dafina@example.com">
+                                <label><i class="fa fa-envelope"></i> Email *</label><br/>
+                                <input type="text" name="email" placeholder="dafina@example.com" onsubmit="return validateForm()"/>
                             </p>
                         </td>
                     </tr>
@@ -93,42 +79,6 @@
                                 </select>
                         </td>
                         <td>
-                            <label>Gender?</label><br/>
-                            <select name="q2">
-                                <option>Female</option>
-                                <option>Male</option>
-                            </select>    
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="box">
-                                <label>Is this your first visit to the website?</label><br/>
-                                <input type="radio" name="copyright" value="01">Yes<br/>
-                                <input type="radio" name="copyright" value="02">No<br/>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="box">
-                                <label>What factors motivated you to purchase on our site?</label><br/>
-                                <input type="checkbox" name="q3" value="01">Price<br/>
-                                <input type="checkbox" name="q3" value="02">Description of item<br/>
-                                <input type="checkbox" name="q3" value="03">Brand name<br/>
-                                <input type="checkbox" name="q3" value="04">Recommendation<br/>
-                                <input type="checkbox" name="q3" value="05">Other<br/>
-
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>
-                                <label>Overall, how satisfied are you with our website?</label><br/>
-                                <input type="number" min="1" max="10" name="rate"/>
-                            </p>
-                        </td>
-                        <td>
                             <label>How often do you buy on our site?</label><br/>
                                 <select name="q1">
                                     <option>Please select</option>
@@ -140,6 +90,50 @@
                                     <option>Once a year</option>
                                     <option>Other</option>
                                 </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="box">
+                                <label>Is this your first visit to the website?</label><br/>
+                                <input type="radio" name="copyright" value="01">Yes<br/>
+                                <input type="radio" name="copyright" value="02">No<br/>
+                            </div>
+                        </td>
+                        <td>
+                            <label>Overall, how satisfied are you with our website?</label><br/>
+                            <input type="number" min="1" max="10" name="rate"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="box">
+                                <label>Did you return any items you purchased from us?</label><br/>
+                                <input type="radio" name="return" value="01" onclick="showNextQuestion(0)">Yes<br/>
+                                <input type="radio" name="return" value="02" onclick="showNextQuestion(1)">No<br/>
+                            </div>
+                            <p>
+                                <div id="hide">
+                                    <label>What was the main reason for your return?</label><br/>
+                                    <input type="checkbox" name="q3" value="01">Not what I ordered<br/>
+                                    <input type="checkbox" name="q3" value="02">Damaged<br/>
+                                    <input type="checkbox" name="q3" value="03">Wrong color<br/>
+                                    <input type="checkbox" name="q3" value="04">Not satisfied with the item<br/>
+                                    <input type="checkbox" name="q3" value="05">Other<br/>
+    
+                                </div> 
+                            </p>
+                        </td>
+                        <td>
+                            <div class="box">
+                                <label>What factors motivated you to purchase on our site?</label><br/>
+                                <input type="checkbox" name="q3" value="01">Price<br/>
+                                <input type="checkbox" name="q3" value="02">Description of item<br/>
+                                <input type="checkbox" name="q3" value="03">Brand name<br/>
+                                <input type="checkbox" name="q3" value="04">Recommendation<br/>
+                                <input type="checkbox" name="q3" value="05">Other<br/>
+
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -165,31 +159,31 @@
                                   <th>Very important</th>
                                 </tr>
                                 <tr>
-                                  <td>Quality</td>
+                                  <th>Quality</th>
                                   <td><input type="radio" name="copyright" value="01"></td>
                                   <td><input type="radio" name="copyright" value="01"></td>
                                   <td><input type="radio" name="copyright" value="01"></td>
                                 </tr>
                                 <tr>
-                                    <td>Cost</td>
+                                    <th>Cost</th>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                 </tr>
                                 <tr>
-                                    <td>Quantity</td>
+                                    <th>Quantity</th>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                 </tr>
                                 <tr>
-                                    <td>Brand name</td>
+                                    <th>Brand name</th>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                 </tr>
                                 <tr>
-                                    <td>Familiarity</td>
+                                    <th>Familiarity</th>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
                                     <td><input type="radio" name="copyright" value="01"></td>
@@ -207,12 +201,24 @@
                         </td>
                     </tr>
                 </table>
-
             </fieldset>
-
-
         </form>
     </main>
+    <script>
+        function showNextQuestion(index) {
+            if(index == 0)
+                document.getElementById("hide").style.display = "block";
+            else
+                document.getElementById("hide").style.display = "none";
+        }
+        function validateForm() {
+            var x = document.forms["forma"]["emri"].value;
+            if (x == "") {
+                window.alert("Name must be filled out");
+                return false;
+             }
+        }
+    </script>
     
 </body>
 </html>

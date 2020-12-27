@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../DarkDelight.css">
+    <title>Lips</title>
+    <link rel="stylesheet" href="Product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <h1>DarkDelight</h1>
+                <h6>Free PSD Website Template</h6>
+            </div>
+    
+            <div id=socialMedia>
+                <a href="#"><img src="" alt="i"></a>
+                <a href="#"><img src="" alt="t"></a>
+                <a href="#"><img src="" alt="p"></a>
+                <a href="#"><img src="" alt="g"></a>
+                <a href="#"><img src="" alt="w"></a>
+                <input id="search" type="text">
+            </div>
+        </div>
+    
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li id="home"><a href="DarkDelight.html">home </a> </li> 
+                    <li><a href="#">style demo</a></li>
+                    <li><a href="#">full width</a></li>
+                    <li><a href="#">dropdown</a>
+                        <ul>    
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Lips</a></li>
+                            <li><a href="#">Eyes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="pages/gallery.html">gallery</a></li>
+                    <li><a href="#">long text link</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="rreshti">
+            <div class="column lips">
+              <div class="content" id="pr1">
+                <button onclick="addToCard(1)"><b>Add to Cart</b></button>
+                <div class="check">&#10004;</div>
+                <div id="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <img src="../Pages/images/l1.jpg" alt="Matte Lipstick - Please Me" style="width:100%">
+                <p>Matte Lipstick - Please Me <b>$29.00</b></p>
+              </div>
+            </div>
+            <div class="column lips">
+              <div class="content" id="pr2">
+                <button onclick="addToCard(2)"><b>Add to Cart</b></button>
+                <div class="check">&#10004;</div>
+                <div id="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <img src="../Pages/images/l2.jpg" alt="Retro Matte Lipstick" style="width:100%">
+                <p>Retro Matte Lipstick<b>$33.00</b></p>
+              </div>
+          </div>  
+          <div class="column lips">
+            <div class="content" id="pr3">
+              <button onclick="addToCard(3)"><b>Add to Cart</b></button>
+              <div class="check">&#10004;</div>
+              <div id="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+              </div>
+              <img src="../Pages/images/l3.jpg" alt="Lipglass" style="width:100%">
+              <p>Lipglass<b>$22.00</b></p>
+            </div>
+        </div>
+        <div class="column lips">
+            <div class="content" id="pr4">
+              <button onclick="addToCard(4)"><b>Add to Cart</b></button>
+              <div class="check">&#10004;</div>
+              <div id="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+              </div>
+              <img src="../Pages/images/l4.jpg" alt="Lipglass" style="width:100%">
+              <p>Lipglass<b>$29.00</b></p>
+            </div>
+        </div>
+        <div class="column lips">
+            <div class="content" id="pr5">
+              <button onclick="addToCard(5)"><b>Add to Cart</b></button>
+              <div class="check">&#10004;</div>
+              <div id="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star"></span>
+              </div>
+              <img src="../Pages/images/l5.jpg" alt="Lip Conditioner" style="width:100%">
+              <p>Lip Conditioner (Tube)<b>$18.00</b></p>
+            </div>
+        </div>
+        <div class="column lips">
+            <div class="content" id="pr6">
+              <button onclick="addToCard(6)"><b>Add to Cart</b></button>
+              <div class="check">&#10004;</div>
+              <div id="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star "></span>
+              </div>
+              <img src="../Pages/images/l6.jpg" alt="Matte Lipstick - Please Me" style="width:100%">
+              <p>Matte Lipstick - Velvet Teddy<b>$18.00</b></p>
+            </div>
+        </div> 
+        </div>
+    </main>
+
+    <script>
+          function addToCard(index) {
+            var values = document.getElementsByClassName('content');
+            for (var i = 0; i < values.length; i++) {
+              if(i == index - 1) {
+              values[i].childNodes[1].style.display = "none"; 
+              values[i].childNodes[3].style.display = "block";
+              }
+            }
+          }
+    </script>
+
+</body>
+</html>
+
