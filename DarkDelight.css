@@ -31,6 +31,7 @@ body{
     border-top: 10px solid #d24260;
     margin: 0 auto;
     width: 1000px;
+    cursor: context-menu;
 } 
 hr {
     display: block;
@@ -119,13 +120,46 @@ header nav a:hover {
 #socialMedia{
     margin-top: auto;
     margin-bottom: auto;
+    float:left;
+    margin-right: 20px;
 }
-
-#search{
+#search input {   
+    width: 200px;
+    height: 25px;
     background-color: #d24260;
     border-radius: 40px;
-    border-color: black;
+    float:right;
+    border: none;
 }
+#search input:focus, #search input.visited {
+    background-color: #d24260;
+} 
+#socialMedia .fa {
+    padding: 5px;
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 2px;
+    border-radius: 100%;
+}
+.fa:hover, body a:hover {
+    opacity: 0.7;
+}
+#search button {
+    outline: none;
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 3px;
+    color:white;
+    height: 23px;
+    width: 23px;
+    background: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    }
 #nav{
     background-image: gradient(linear,left top, left bottom,from(#3a383f),to(#0f0f0f));
     background-image: linear-gradient(#3a383f,#0f0f0f);
@@ -189,6 +223,7 @@ header nav a:hover {
         background-color: #1b1b1b;
         color:#999999;
         height: 760px; 
+        border-bottom: 4px solid #151513;
     }
 #row1 {
     height: 520px;
@@ -285,6 +320,28 @@ header nav a:hover {
 footer {  
     background-color: #201e1d;
     color:#999999; 
+    border-top: 1px solid #373432;
+    cursor: context-menu;
+}
+footer h5 {
+    color: rgb(194, 194, 140);
+}
+footer ul li {
+    border-bottom: 1px solid #373432;
+    line-height: 14.4px;
+    padding: 8px 0px;
+}
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+footer ul li a{
+    color:#999999;
+    text-decoration:none;
+}
+footer ul li a:hover{
+    color:#d24260;
 }
 .button {
     background-color: #2c2c2c;
@@ -319,32 +376,24 @@ footer {
     margin-left: 20px;
     position: relative;
 }
-
-
-
-
 #row2 a{
     color: #d24260;
     text-decoration: none;
 }
-
 .media h5{
     padding-top: 15px;
     margin-bottom: 0px;
     
 }
-
 .media h5 b{
     padding-left: 10px;
     
 }
-
 #p1{
     position: absolute;
     bottom: 0;
     left: 0;
 }
-
 #p2{
     position: absolute;
     bottom: 0;

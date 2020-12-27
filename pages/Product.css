@@ -5,7 +5,6 @@
 .column {
     float: left;
     width: 310px;
-    display: none;
 }
 .content {
     padding: 10px;
@@ -45,9 +44,6 @@
   }
 .content img {
     border: 1px solid #9999994d;
-}
-.show {
-    display: block;
 }
 .btn {
     border: none;
