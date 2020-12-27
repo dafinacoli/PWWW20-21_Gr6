@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eyes</title>
+<link rel="stylesheet" href="../DarkDelight.css">
+<link rel="stylesheet" href="Product.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <h1>DarkDelight</h1>
+                <h6>Free PSD Website Template</h6>
+            </div>
+    
+            <div id=socialMedia>
+                <a href="#"><img src="" alt="i"></a>
+                <a href="#"><img src="" alt="t"></a>
+                <a href="#"><img src="" alt="p"></a>
+                <a href="#"><img src="" alt="g"></a>
+                <a href="#"><img src="" alt="w"></a>
+                <input id="search" type="text">
+            </div>
+        </div>
+    
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li id="home"><a href="DarkDelight.html">home </a> </li> 
+                    <li><a href="#">style demo</a></li>
+                    <li><a href="#">full width</a></li>
+                    <li><a href="#">dropdown</a>
+                        <ul>    
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Lips</a></li>
+                            <li><a href="#">Eyes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">gallery</a></li>
+                    <li><a href="#">long text link</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="rreshti">
+            <div class="column eyes">
+                <div class="content" id="pr7">
+                  <button onclick="addToCard(7)"><b>Add to Cart</b></button>
+                  <div class="check">&#10004;</div>
+                  <div id="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                  </div>
+                  <img src="../Pages/images/e1.jpg" alt="Eye product" style="width:100%">
+                  <p>Dazzleshadow Extreme<b>$20.00</b></p>
+                </div>
+              </div>
+              <div class="column eyes">
+                <div class="content" id="pr8">
+                  <button onclick="addToCard(8)"><b>Add to Cart</b></button>
+                  <div class="check">&#10004;</div>
+                  <div id="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                  </div>
+                  <img src="../Pages/images/e2.jpg" alt="Eye product" style="width:100%">
+                  <p>Eye Shadow<b>$18.00</b></p>
+                </div>
+              </div>
+              <div class="column eyes">
+              <div class="content" id="pr9">
+                <button onclick="addToCard(9)"><b>Add to Cart</b></button>
+                <div class="check">&#10004;</div>
+                <div id="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star "></span>
+                </div>
+                <img src="../Pages/images/e3.jpg" alt="Eye product" style="width:100%">
+                <p>Extra Dimension Eye Shadow<b>$20.00</b></p>
+                  </div>
+              </div>
+              <div class="column eyes">
+                <div class="content" id="pr10">
+                  <button onclick="addToCard(10)"><b>Add to Cart</b></button>
+                  <div class="check">&#10004;</div>
+                  <div id="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                  </div>
+                  <img src="../Pages/images/e4.jpg" alt="Eye product" style="width:100%">
+                  <p>Dazzleshadow<b>$15.00</b></p>
+                </div>
+              </div>
+              <div class="column eyes">
+                <div class="content" id="pr11">
+                  <button onclick="addToCard(11)"><b>Add to Cart</b></button>
+                  <div class="check">&#10004;</div>
+                  <div id="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                  </div>
+                  <img src="../Pages/images/e5.jpg" alt="Eye product" style="width:100%">
+                  <p>Dazzleshadow Liquid<b>$30.00</b></p>
+                </div>
+              </div>  
+        </div>
+    </main>
+
+    <script>
+          function addToCard(index) {
+            var values = document.getElementsByClassName('content');
+            for (var i = 0; i < values.length; i++) {
+              if(i == index - 1) {
+              values[i].childNodes[1].style.display = "none"; 
+              values[i].childNodes[3].style.display = "block";
+              }
+            }
+          }
+    </script>
+
+</body>
+</html>
+
