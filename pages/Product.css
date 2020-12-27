@@ -1,3 +1,9 @@
+.rreshti {
+    background-color: #1b1b1b;
+    color:#999999;
+    height: 760px; 
+    border-bottom: 4px solid #151513;
+}
 .rreshti,
 .rreshti > .column {
     padding: 8px;
@@ -9,7 +15,7 @@
 .content {
     padding: 10px;
     border: 1px solid #99999977;
-    background-color: white;
+    background-color:white;
 }
 .content p {
     margin: 3px 0;
