@@ -1,24 +1,17 @@
 main {
     color: white;
     background-color: #1b1b1b;
-}
-#table1 {
-    border-collapse: separate;
-    border-spacing: 50px 50px;
-    padding: 20px;
-}
-#table2, #table2 th, #table2 td {
-    border: 1px solid white;
-}
-#first {
-    border: none;
+    padding: 20px 20px;
+    font-size: 17px;
 }
 legend {
     text-align: center;
     text-transform: uppercase;
 }
-
-#table1 input[type = "text"] {
+#table1 {
+    border-spacing: 20px; /* Apply cell spacing */
+}
+#table1 input[type = "text"], #table1 input[type = "email"] {
     width: 300px;
     height:  10px;
     padding: 12px;
@@ -26,24 +19,29 @@ legend {
     border-radius: 3px;
     outline: none;
 }
-#table1 input[type=text]:focus {
+#table1 input[type=text]:focus, #table1 input[type=email]:focus, select:focus {
     border: 3px solid #d24260;
 }
-
 #table1 select {
     width: 325px;
     padding: 10px;
     border-radius: 3px;
     outline: none;
 }
-#hide {
-    display: none;
-}
-#table1 p {
-    margin-bottom: 20px;
-}
 #table2 td {
     width: 100px;
+    text-align: center;
+}
+#div1, #div2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+input[type="submit"]:disabled {
+    opacity: 0.5;
 }
 
 
