@@ -29,6 +29,9 @@ main {
   margin: 0;
   padding: 0;
 }
+.addText:before {
+  content: "HOW TO: ";
+}
 p {
   text-align: center;
   color:white;
