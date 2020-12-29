@@ -10,6 +10,8 @@ legend {
 }
 #table1 {
     border-spacing: 20px; /* Apply cell spacing */
+    margin-left: auto;
+    margin-right: auto;
 }
 #table1 input[type = "text"], #table1 input[type = "email"] {
     width: 300px;
@@ -38,7 +40,7 @@ legend {
     height: 35px;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
   }
 input[type="submit"]:disabled {
     opacity: 0.5;
