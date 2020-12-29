@@ -1,3 +1,11 @@
+main {
+    background-color: #1b1b1b;
+    border-bottom: 4px solid #151513;
+}
+.rreshti {
+    color:#999999;
+    height: 760px; 
+}
 .rreshti,
 .rreshti > .column {
     padding: 8px;
@@ -8,12 +16,12 @@
 }
 .content {
     padding: 10px;
-    border: 1px solid #99999977;
-    background-color: white;
+    border: 1px solid #151513;
+    background-color:white;
 }
 .content p {
     margin: 3px 0;
-    color: #999999;
+    color: #151513;
 }
 .content b {
     float: right;
@@ -43,7 +51,7 @@
     opacity: 0.7;
   }
 .content img {
-    border: 1px solid #9999994d;
+    border: 1px solid #9999997e;
 }
 .btn {
     border: none;

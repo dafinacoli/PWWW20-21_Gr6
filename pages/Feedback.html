@@ -6,7 +6,6 @@
     <title>Feedback</title>
     <link rel="stylesheet" href="../DarkDelight.css">
     <link rel="stylesheet" href="Feedback.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    
 </head>
@@ -19,7 +18,7 @@
             </div>
     
             <div style = "margin-top: auto; margin-bottom: auto;">
-                <div id = socialMedia>
+                <div id="socialMedia">
                     <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin" style="background: #007bb5; color: white;"></a>
                     <a href="https://twitter.com/" target="_blank" class="fa fa-twitter" style="background: #55ACEE; color: white;"></a>
                     <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank" style="background: #cb2027; color: white;"></a>
@@ -38,7 +37,7 @@
         <div id="nav">
             <nav>
                 <ul>
-                    <li id="home"><a href="../DarkDelight.html">Home </a> </li> 
+                    <li id="home" style="border: none; padding-left: 0;"><a href="../DarkDelight.html">Home </a> </li> 
                     <li><a href="#">style demo</a></li>
                     <li><a href="#">full width</a></li>
                     <li><a href="#">Shop</a>
@@ -51,151 +50,136 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="Feedback.html">Feedback</a></li>
                     <li><a href="#">Login</a></li>
-                    
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <form method="POST" action="" name="forma">
+        <form method="POST" action="#" name="forma">
             <fieldset>
                 <legend>help us improve</legend>
                 <table id="table1">
                     <tr>
                         <td>
-                            <p>
-                                <label><i class="fa fa-user"></i> Full Name *</label><br/>
-                                <input type="text" name="emri" placeholder="Dafina Coli" onsubmit="return validateForm()"/>
-                            </p>
+                            <label><i class="fa fa-user"></i> Full Name *</label><br/>
+                            <input type="text" name="emri" placeholder="Type your full name ..."/>
                         </td>
                         <td>
-                            <p>
-                                <label><i class="fa fa-envelope"></i> Email *</label><br/>
-                                <input type="text" name="email" placeholder="dafina@example.com" onsubmit="return validateForm()"/>
-                            </p>
+                            <label><i class="fa fa-envelope"></i> Email *</label><br/>
+                            <input type="email" name="email" placeholder="dafina@example.com"/>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                                <label>How did you learn about us?</label><br/>
-                                <select name="q1">
-                                    <option>Please select</option>
-                                    <option>Friend or Relative</option>
-                                    <option>Web search engine</option>
-                                    <option>Banner Ad</option>
-                                    <option>Pop-up ad</option>
-                                    <option>Other</option>
-                                </select>
+                            <label>How did you learn about us?</label><br/>
+                            <select name="q1">
+                                <option>Please select</option>
+                                <option>Friend or Relative</option>
+                                <option>Web search engine</option>
+                                <option>Banner Ad</option>
+                                <option>Pop-up ad</option>
+                                <option>Other</option>
+                            </select>
                         </td>
                         <td>
                             <label>How often do you buy on our site?</label><br/>
-                                <select name="q1">
-                                    <option>Please select</option>
-                                    <option>Daily</option>
-                                    <option>Once a week</option>
-                                    <option>Twice a week</option>
-                                    <option>Once a month</option>
-                                    <option>Twice a month</option>
-                                    <option>Once a year</option>
-                                    <option>Other</option>
-                                </select>
+                            <select name="q2">
+                                <option>Please select</option>
+                                <option>Daily</option>
+                                <option>Once a week</option>
+                                <option>Twice a week</option>
+                                <option>Once a month</option>
+                                <option>Twice a month</option>
+                                <option>Once a year</option>
+                                <option>Other</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="box">
-                                <label>Is this your first visit to the website?</label><br/>
-                                <input type="radio" name="copyright" value="01">Yes<br/>
-                                <input type="radio" name="copyright" value="02">No<br/>
-                            </div>
+                            <label>Is this your first visit to the website?</label><br/>
+                            <input type="radio" name="q3" value="01">Yes<br/>
+                            <input type="radio" name="q3" value="02">No<br/>
                         </td>
                         <td>
                             <label>Overall, how satisfied are you with our website?</label><br/>
-                            <input type="number" min="1" max="10" name="rate"/>
+                            <input type="number" min="1" max="10" name="rate" step="1" placeholder="0"/>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="box">
-                                <label>Did you return any items you purchased from us?</label><br/>
-                                <input type="radio" name="return" value="01" onclick="showNextQuestion(0)">Yes<br/>
-                                <input type="radio" name="return" value="02" onclick="showNextQuestion(1)">No<br/>
-                            </div>
+                            <label>Did you return any items you purchased from us?</label><br/>
+                            <input type="radio" name="q4" value="01" onclick="showNextQuestion(0)">Yes<br/>
+                            <input type="radio" name="q4" value="02" onclick="showNextQuestion(1)">No<br/>
                             <p>
-                                <div id="hide">
+                                <div id="hide" style="display: none;">
                                     <label>What was the main reason for your return?</label><br/>
-                                    <input type="checkbox" name="q3" value="01">Not what I ordered<br/>
-                                    <input type="checkbox" name="q3" value="02">Damaged<br/>
-                                    <input type="checkbox" name="q3" value="03">Wrong color<br/>
-                                    <input type="checkbox" name="q3" value="04">Not satisfied with the item<br/>
-                                    <input type="checkbox" name="q3" value="05">Other<br/>
-    
+                                    <input type="checkbox" name="q5" value="01">Not what I ordered<br/>
+                                    <input type="checkbox" name="q5" value="02">Damaged<br/>
+                                    <input type="checkbox" name="q5" value="03">Wrong color<br/>
+                                    <input type="checkbox" name="q5" value="04">Not satisfied with the item<br/>
+                                    <input type="checkbox" name="q5" value="05">Other<br/>
                                 </div> 
                             </p>
                         </td>
                         <td>
-                            <div class="box">
-                                <label>What factors motivated you to purchase on our site?</label><br/>
-                                <input type="checkbox" name="q3" value="01">Price<br/>
-                                <input type="checkbox" name="q3" value="02">Description of item<br/>
-                                <input type="checkbox" name="q3" value="03">Brand name<br/>
-                                <input type="checkbox" name="q3" value="04">Recommendation<br/>
-                                <input type="checkbox" name="q3" value="05">Other<br/>
-
-                            </div>
+                            <label>What factors motivated you to purchase on our site?</label><br/>
+                            <input type="checkbox" name="q6" value="01">Price<br/>
+                            <input type="checkbox" name="q6" value="02">Description of item<br/>
+                            <input type="checkbox" name="q6" value="03">Brand name<br/>
+                            <input type="checkbox" name="q6" value="04">Recommendation<br/>
+                            <input type="checkbox" name="q6" value="05">Other<br/>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <label>What particular aspect(s) of our website do you like?</label><br/>
-                            <textarea name="description" rows="4" cols="50"
-                            placeholder="Type something ...."></textarea>
+                            <textarea name="like" rows="4" cols="50" placeholder="Type something ...."></textarea>
                         </td>
                         <td>
                             <label>What particular aspect(s) of our website do you dislike?</label><br/>
-                            <textarea name="description" rows="4" cols="50"
-                            placeholder="Type something ...."></textarea>
+                            <textarea name="dislike" rows="4" cols="50" placeholder="Type something ...."></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <label>Please rank what you look for in order of importance when selecting products on DarkDelight?</label><br/>
-                            <table id="table2">
+                            <table id="table2" cellpadding='2' cellspacing='10' border=1>
                                 <tr>
-                                  <th id="first" style="border: none;"></th>
+                                  <th style="border: none;"></th>
                                   <th>Not important</th>
                                   <th>Maybe</th>
                                   <th>Very important</th>
                                 </tr>
                                 <tr>
                                   <th>Quality</th>
-                                  <td><input type="radio" name="copyright" value="01"></td>
-                                  <td><input type="radio" name="copyright" value="01"></td>
-                                  <td><input type="radio" name="copyright" value="01"></td>
+                                  <td><input type="radio" name="quality" value="01"></td>
+                                  <td><input type="radio" name="quality" value="02"></td>
+                                  <td><input type="radio" name="quality" value="03"></td>
                                 </tr>
                                 <tr>
                                     <th>Cost</th>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="cost" value="01"></td>
+                                    <td><input type="radio" name="cost" value="02"></td>
+                                    <td><input type="radio" name="cost" value="03"></td>
                                 </tr>
                                 <tr>
                                     <th>Quantity</th>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="quantity" value="01"></td>
+                                    <td><input type="radio" name="quantity" value="02"></td>
+                                    <td><input type="radio" name="quantity" value="03"></td>
                                 </tr>
                                 <tr>
                                     <th>Brand name</th>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="brandName" value="01"></td>
+                                    <td><input type="radio" name="brandName" value="02"></td>
+                                    <td><input type="radio" name="brandName" value="03"></td>
                                 </tr>
                                 <tr>
                                     <th>Familiarity</th>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
-                                    <td><input type="radio" name="copyright" value="01"></td>
+                                    <td><input type="radio" name="familiarity" value="01"></td>
+                                    <td><input type="radio" name="familiarity" value="02"></td>
+                                    <td><input type="radio" name="familiarity" value="03"></td>
                                 </tr>
                               </table>
                             
@@ -203,16 +187,66 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <div class="rectangle">
-                                <input type="submit" class="rounded"/>
-                                <input type="reset" value="Pastro" class="rounded"/>
+                            <p>Drag the image back and forth between the two div elements.</p>
+                            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <img src="images/robot.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
                             </div>
+                            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                                <input id="sub" type="submit" class="button" disabled="disabled"/>
+                                <input type="reset" value="Reset" class="button"/>
                         </td>
                     </tr>
                 </table>
             </fieldset>
         </form>
     </main>
+    <footer>
+        <div id = "row3">
+            <div class = "col1">
+                <h5>CONTACT DETAILS</h5>
+                <p>
+                    <address>
+                        You can contact us at:
+                        <br>Tel: +111 1111111
+                        <br>Fax: 1111 1111111
+                        <br>Email:darkdelight@domain.com
+                    </address>
+                </p>
+            </div>
+            <div class = "col2">
+                <h5>QUICK LINKS</h5>
+                <ul>
+                    <li><a href="../DarkDelight.html" target="_blank">Home Page</a></li>
+                    <li><a href="Lips.html">Shop Lip Products</a></li>
+                    <li><a href="Eyes.html">Shop Eye Products</a></li>
+                    <li><a href="Face.html">Shop Face Products</a></li>
+                </ul>
+            </div>
+            <div class = "col2">
+                <h5>FROM THE BLOG</h5>
+                <p><b>Hair Steaming</b><br/>
+                <small>Posted by Doruntina</small></p>
+                I've been using the old school technique since the age of 10. But, I'm here to tell you that there's another...<br>
+                <a href="Blogs.html#blog1" class="float-right1">Read More &#10097;</a>
+            </div>
+            <div class = "col3">
+                <h5>GRAB OUR NEWSLETTER</h5>
+                <form name="form1" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+                    <input type="text" class="input" name="emri" placeholder="Name"/>
+                    <input type="text" class="input" name="emaili" placeholder="Email"/>
+                    <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
+                </form>
+            </div> 
+        </div> 
+        <div style="padding: 0 20px; height: 50px;">
+            <p style="float: left;">  Copyright &COPY; 2020 · All Rights Reserved · Gr. 6</p>
+            <p style="float: right;">Template by OS Templates</p> 
+        </div>    
+    </footer>
     <script>
         function showNextQuestion(index) {
             if(index == 0)
@@ -220,12 +254,19 @@
             else
                 document.getElementById("hide").style.display = "none";
         }
-        function validateForm() {
-            var x = document.forms["forma"]["emri"].value;
-            if (x == "") {
-                window.alert("Name must be filled out");
-                return false;
-             }
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            document.getElementById("sub").disabled = false; // nese e bene drag foton, butoni behet enable
         }
     </script>
     
