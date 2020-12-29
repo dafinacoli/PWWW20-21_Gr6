@@ -24,6 +24,10 @@ body{
     width: 1000px;
     cursor: context-menu;
 } 
+main{
+    background-color: #1b1b1b;
+    border-bottom: 4px solid #151513;
+}
 hr {
     display: block;
     height: 1px;
@@ -305,11 +309,11 @@ footer ul {
     margin: 0;
     padding: 0;
 }
-footer ul li a {
+footer ul li a , #mail{
     color:#999999;
     text-decoration:none;
 }
-footer ul li a:hover {
+footer ul li a:hover, #mail:hover {
     color:#d24260;
 }
 .button {
