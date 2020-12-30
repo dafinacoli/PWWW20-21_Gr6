@@ -1,6 +1,8 @@
 main {
-    color: white;
-    background-color: #1b1b1b;
+    color: black;
+    background-image: url(images/img_flwr.gif), url(images/paper.jpg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
     padding: 20px 20px;
     font-size: 17px;
 }
