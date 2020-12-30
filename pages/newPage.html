@@ -12,12 +12,22 @@
     <style>
         main {
             height: 1000px;
+            position: relative;
         }
 
         #canvas1,
         #myCanvas {
             float: left;
         }
+
+        /* #myDiv {
+            border: 1px solid greenyellow;
+            margin-left: 120px;
+            margin-top: 100px;
+            transform: rotateZ(90deg);
+            font-size: 40px;
+            color: white;
+        } */
 
         #search-button {
             width: 100px;
@@ -27,6 +37,74 @@
         #search-button svg {
             width: 25px;
             height: 25px;
+        }
+
+        #eyes {
+            transform: translate(160px, 0);
+        }
+
+        #face {
+            transform: translate(160px, 70px);
+        }
+
+        .link {
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: #cb2027;
+            padding: 10px 20px;
+            font-size: 25;
+            font-family: Verdana;
+
+        }
+
+
+        #demo {
+            position: absolute;
+            bottom: 30px;
+            left: 250px;
+            color: white;
+        }
+
+        #skadimi {
+            position: absolute;
+            bottom: 10px;
+            left: 400px;
+            color: white;
+        }
+
+
+
+        /* animacion- ndryshimi i background dhe pozitave */
+        #animacioni {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            position: relative;
+            animation-name: example;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            border-radius: 100%
+        }
+
+        @keyframes example {
+            0% {
+                background: radial-gradient(#cb2027, white);
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                background: radial-gradient(#cb2027, white);
+                left: 950px;
+                top: 0px;
+            }
+
+            100% {
+                background: radial-gradient(#cb2027, white);
+                left: 0px;
+                top: 0px;
+            }
         }
     </style>
 </head>
@@ -90,22 +168,11 @@
             </canvas>
             <canvas id="canvas2" width="310" height="100"></canvas>
         </div>
+
+        <div id="animacioni" style="color: white; font-weight: bold; padding: 10px;">Sale</div>
+
         <br><br>
-        <!-- <svg viewBox="0 0 100 100" width="100" height="100">
-            <defs>
-              <path id="circle"
-                d="
-                  M 50, 50
-                  m -37, 0
-                  a 37,37 0 1,1 74,0
-                  a 37,37 0 1,1 -74,0"/>
-            </defs>
-            <text font-size="17">
-              <textPath xlink:href="#circle">
-                You spin me right round...
-              </textPath>
-            </text>
-          </svg> -->
+
         <div style="width:520px; margin: 0 20px; border: 1px solid white; float: left;">
             <img id="scream" width="100" height="100" src="images/sale.jpg" alt="The Scream" style="display: none;">
             <canvas id="photo" width="520" height="320" style="border:1px solid #d3d3d3;">
@@ -118,15 +185,35 @@
                     No further discounts apply.</p>
             </section>
         </div>
+
         <aside>
+
+            <!-- <div id="myDiv">Hurry Up</div> -->
+
             <svg>
                 <text x="161" y="40" font-family="Verdana" font-size="15" fill="white">BUY NOW: </text>
                 <rect x="160" y="60" width="80" height="40" fill="#c9181a" />
                 Sorry, your browser does not support inline SVG.
-                <a href="Lips.html"><text x="174" y="87" font-family="Verdana" font-size="20" fill="white">LIPS</text></a>
+                <a href="Lips.html"><text x="174" y="87" font-family="Verdana" font-size="20"
+                        fill="white">LIPS</text></a>
             </svg>
             <br>
+
+            <div id="eyes">
+                <a class="link" href="Eyes.html"> Eyes </a>
+            </div>
+
+            <div id="face">
+                <a class="link" href="Eyes.html"> Face </a>
+            </div>
+
+
         </aside>
+
+        <div id="demo"></div>
+
+        <div id="skadimi"></div>
+
     </main>
     <footer>
         <div id="row3">
@@ -176,6 +263,7 @@
     <script>
         draw('canvas1');
         draw('canvas2');
+        //holiday sale text
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext('2d');
         ctx.font = "68px arial";
@@ -185,13 +273,13 @@
         ctx.fillStyle = gradient;
         ctx.fillText("Holiday Sale", 5, 60);
 
-        window.onload = function () {
-            var canvas = document.getElementById("photo");
-            var ctx = canvas.getContext("2d");
-            var img = document.getElementById("scream");
-            ctx.drawImage(img, 10, 10, 500, 300);
-        };
+        //foto
+        var canvas = document.getElementById("photo");
+        var ctx = canvas.getContext("2d");
+        var img = document.getElementById("scream");
+        ctx.drawImage(img, 10, 10, 500, 300);
 
+        //vijat
         function draw(element) {
             var ctx = document.getElementById(element).getContext('2d');
             ctx.lineWidth = 10;
@@ -208,6 +296,22 @@
                 ctx.stroke();
             }
         }
+
+        //koha
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+
+        //konstruktori
+        function Skadimi(data, produkti) {
+            this.data = data;
+            this.produkti = produkti;
+        }
+
+
+        var ofertaL = new Skadimi("01/02/2021", "Lips");
+
+        document.getElementById("skadimi").innerHTML = ofertaL.produkti + " sale expires " + ofertaL.data;
+
     </script>
 </body>
 
