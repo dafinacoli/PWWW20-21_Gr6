@@ -142,6 +142,9 @@ hr{
 #lista ul li{
     color: rgb(97, 97, 97);
 }
+#lista ul{
+    list-style-type: square;
+}
     
 
 

@@ -72,6 +72,7 @@
     </div>
 
     <div class="row">
+        <a href="DarkDelight.html#header" id="myLink">Top</a>
         <div id="row1">
             <div id="leftpane">
                 <h4>A Little About Us</h4>
@@ -186,7 +187,7 @@
             <div class = "col2">
                 <h5>FROM THE BLOG</h5>
                 <p><b>Hair Steaming</b><br/>
-                <small>Posted by <i>Doruntina</i></small></p>
+                <small>Posted by <i>Doruntinë</i></small></p>
                 I've been using the old school technique since the age of 10. But, I'm here to tell you that there's another...<br>
                 <a href="pages/Blogs.html#blog1" class="float-right1">Read More &#10097;</a>
             </div>
@@ -235,6 +236,17 @@
       }
       dots[slideIndex-1].className += " active";
     }
+    var myLink = document.getElementById("myLink");
 
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            myLink.style.display = "block";
+        } else {
+            myLink.style.display = "none";
+        }
+    }
 </script>
 </html>
