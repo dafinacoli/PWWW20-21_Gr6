@@ -1,193 +1,198 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eyes</title>
-<link rel="stylesheet" href="../DarkDelight.css">
-<link rel="stylesheet" href="Product.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eyes</title>
+  <link rel="stylesheet" href="../DarkDelight.css">
+  <link rel="stylesheet" href="Product.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function addToCard(index) {
+      var values = document.getElementsByClassName('content');
+      for (var i = 0; i < values.length; i++) {
+        if (i == index - 1) {
+          values[i].childNodes[1].style.display = "none";
+          values[i].childNodes[3].style.display = "block";
+        }
+      }
+    }
+  </script>
 </head>
+
 <body>
   <header>
     <div id="header">
-        <div id="logo">
-            <h1>DarkDelight</h1>
-            <h6>Free PSD Website Template</h6>
-        </div>
+      <div id="logo">
+        <h1>DarkDelight</h1>
+        <h6>Free PSD Website Template</h6>
+      </div>
 
-        <div style = "margin-top: auto; margin-bottom: auto;">
-            <div id="socialMedia">
-                <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin" style="background: #007bb5; color: white;"></a>
-                <a href="https://twitter.com/" target="_blank" class="fa fa-twitter" style="background: #55ACEE; color: white;"></a>
-                <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank" style="background: #cb2027; color: white;"></a>
-                <a href="http://plus.google.com/" class="fa fa-google-plus" target="_blank" style="background: #222425; color: white;"></a>
-                <a href="https://rss.com/" class="fa fa-rss" target="_blank" style="background: #ff6600; color: white;"></a>
-            </div>
-            <div style="float: right;">
-                <form id="search" action="">
-                    <input type="text" placeholder="" name="search">
-                    <button type="submit"><i class="fa fa-search" style="width: 1px; margin-right: 10px;"></i></button>
-                </form>
-            </div>
+      <div style="margin-top: auto; margin-bottom: auto;">
+        <div id="socialMedia">
+          <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"
+            style="background: #007bb5; color: white;"></a>
+          <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"
+            style="background: #55ACEE; color: white;"></a>
+          <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank"
+            style="background: #cb2027; color: white;"></a>
+          <a href="http://plus.google.com/" class="fa fa-google-plus" target="_blank"
+            style="background: #222425; color: white;"></a>
+          <a href="https://rss.com/" class="fa fa-rss" target="_blank" style="background: #ff6600; color: white;"></a>
         </div>
+        <div style="float: right;">
+          <form id="search" action="">
+            <input type="text" placeholder="" name="search">
+            <button type="submit"><i class="fa fa-search" style="width: 1px; margin-right: 10px;"></i></button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <div id="nav">
-        <nav>
+      <nav>
+        <ul>
+          <li id="home" style="border: none; padding-left: 0;"><a href="../DarkDelight.html">Home </a> </li>
+          <li><a href="New.html">New</a></li>
+          <li><a href="Sale.html">Sale</a></li>
+          <li><a href="#">Shop</a>
             <ul>
-                <li id="home" style="border: none; padding-left: 0;"><a href="../DarkDelight.html">Home </a> </li> 
-                <li><a href="#">style demo</a></li>
-                <li><a href="#">full width</a></li>
-                <li><a href="#">Shop</a>
-                    <ul>    
-                        <li><a href="Lips.html">Lips</a></li>
-                        <li><a href="Eyes.html">Eyes</a></li>
-                        <li><a href="Face.html">Face</a></li>
-                    </ul>
-                </li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-                <li><a href="#">Login</a></li>
+              <li><a href="Lips.html">Lips</a></li>
+              <li><a href="Eyes.html">Eyes</a></li>
+              <li><a href="Face.html">Face</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="Feedback.html">Feedback</a></li>
+          <li><a href="Login.html">Login</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-    <main>
-        <div class="rreshti">
-            <div class="column eyes">
-                <div class="content" id="pr7">
-                  <button onclick="addToCard(7)"><b>Add to Cart</b></button>
-                  <div class="check">&#10004;</div>
-                  <div id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                  </div>
-                  <img src="../Pages/images/e1.jpg" alt="Eye product" style="width:100%">
-                  <p>Dazzleshadow Extreme<b>$20.00</b></p>
-                </div>
-              </div>
-              <div class="column eyes">
-                <div class="content" id="pr8">
-                  <button onclick="addToCard(8)"><b>Add to Cart</b></button>
-                  <div class="check">&#10004;</div>
-                  <div id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                  </div>
-                  <img src="../Pages/images/e2.jpg" alt="Eye product" style="width:100%">
-                  <p>Eye Shadow<b>$18.00</b></p>
-                </div>
-              </div>
-              <div class="column eyes">
-              <div class="content" id="pr9">
-                <button onclick="addToCard(9)"><b>Add to Cart</b></button>
-                <div class="check">&#10004;</div>
-                <div id="rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star "></span>
-                </div>
-                <img src="../Pages/images/e3.jpg" alt="Eye product" style="width:100%">
-                <p>Extra Dimension Eye Shadow<b>$20.00</b></p>
-                  </div>
-              </div>
-              <div class="column eyes">
-                <div class="content" id="pr10">
-                  <button onclick="addToCard(10)"><b>Add to Cart</b></button>
-                  <div class="check">&#10004;</div>
-                  <div id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                  </div>
-                  <img src="../Pages/images/e4.jpg" alt="Eye product" style="width:100%">
-                  <p>Dazzleshadow<b>$15.00</b></p>
-                </div>
-              </div>
-              <div class="column eyes">
-                <div class="content" id="pr11">
-                  <button onclick="addToCard(11)"><b>Add to Cart</b></button>
-                  <div class="check">&#10004;</div>
-                  <div id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                  </div>
-                  <img src="../Pages/images/e5.jpg" alt="Eye product" style="width:100%">
-                  <p>Dazzleshadow Liquid<b>$30.00</b></p>
-                </div>
-              </div>  
+  <main>
+    <div class="rreshti">
+      <div class="column eyes">
+        <div class="content" id="pr7">
+          <button onclick="addToCard(1)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
+          <div id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+          </div>
+          <img src="../Pages/images/e1.jpg" alt="Eye product" style="width:100%">
+          <p>Dazzleshadow Extreme<b>$20.00</b></p>
         </div>
-    </main>
-    <footer>
-      <div id = "row3">
-          <div class = "col1">
-              <h5>CONTACT DETAILS</h5>
-              <p>
-                  <address>
-                      You can contact us at:
-                      <br>Tel: +111 1111111
-                      <br>Fax: 1111 1111111
-                      <br>Email:darkdelight@domain.com
-                  </address>
-              </p>
+      </div>
+      <div class="column eyes">
+        <div class="content" id="pr8">
+          <button onclick="addToCard(2)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
+          <div id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
           </div>
-          <div class = "col2">
-              <h5>QUICK LINKS</h5>
-              <ul>
-                  <li><a href="../DarkDelight.html" target="_blank">Home Page</a></li>
-                  <li><a href="Lips.html">Shop Lip Products</a></li>
-                  <li><a href="Eyes.html">Shop Eye Products</a></li>
-                  <li><a href="Face.html">Shop Face Products</a></li>
-              </ul>
+          <img src="../Pages/images/e2.jpg" alt="Eye product" style="width:100%">
+          <p>Eye Shadow<b>$18.00</b></p>
+        </div>
+      </div>
+      <div class="column eyes">
+        <div class="content" id="pr9">
+          <button onclick="addToCard(3)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
+          <div id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
           </div>
-          <div class = "col2">
-              <h5>FROM THE BLOG</h5>
-              <p><b>Hair Steaming</b><br/>
-              <small>Posted by Doruntina</small></p>
-              I've been using the old school technique since the age of 10. But, I'm here to tell you that there's another...<br>
-              <a href="Blogs.html#blog1" class="float-right1">Read More &#10097;</a>
+          <img src="../Pages/images/e3.jpg" alt="Eye product" style="width:100%">
+          <p>Extra Dimension Eye Shadow<b>$20.00</b></p>
+        </div>
+      </div>
+      <div class="column eyes">
+        <div class="content" id="pr10">
+          <button onclick="addToCard(4)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
+          <div id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
           </div>
-          <div class = "col3">
-              <h5>GRAB OUR NEWSLETTER</h5>
-              <form name="form1" action="http://www.randyconnolly.com/tests/process.php" method="POST">
-                  <input type="text" class="input" name="emri" placeholder="Name"/>
-                  <input type="text" class="input" name="emaili" placeholder="Email"/>
-                  <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
-              </form>
-          </div> 
-      </div> 
-      <div style="padding: 0 20px; height: 50px;">
-          <p style="float: left;">  Copyright &COPY; 2020 · All Rights Reserved · Gr. 6</p>
-          <p style="float: right;">Template by OS Templates</p> 
-      </div>    
-    </footer>
-    <script>
-          function addToCard(index) {
-            var values = document.getElementsByClassName('content');
-            for (var i = 0; i < values.length; i++) {
-              if(i == index - 1) {
-              values[i].childNodes[1].style.display = "none"; 
-              values[i].childNodes[3].style.display = "block";
-              }
-            }
-          }
-    </script>
-
+          <img src="../Pages/images/e4.jpg" alt="Eye product" style="width:100%">
+          <p>Dazzleshadow<b>$15.00</b></p>
+        </div>
+      </div>
+      <div class="column eyes">
+        <div class="content" id="pr11">
+          <button onclick="addToCard(5)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
+          <div id="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+          </div>
+          <img src="../Pages/images/e5.jpg" alt="Eye product" style="width:100%">
+          <p>Dazzleshadow Liquid<b>$30.00</b></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="row3">
+      <div class="col1">
+        <h5>CONTACT DETAILS</h5>
+        <p>
+        <address>
+          You can contact us at:
+          <br>Tel: +111 1111111
+          <br>Fax: 1111 1111111
+          <br><a id="mail" href="mailto:webmaster@example.com">Email:darkdelight@domain.com</a>
+        </address>
+        </p>
+      </div>
+      <div class="col2">
+        <h5>QUICK LINKS</h5>
+        <ul>
+          <li><a href="../DarkDelight.html">Home Page</a></li>
+          <li><a href="Lips.html">Shop Lip Products</a></li>
+          <li><a href="Eyes.html">Shop Eye Products</a></li>
+          <li><a href="Face.html">Shop Face Products</a></li>
+        </ul>
+      </div>
+      <div class="col2">
+        <h5>FROM THE BLOG</h5>
+        <p><b>Hair Steaming</b><br />
+          <small>Posted by <i>Doruntinë</i></small>
+        </p>
+        I've been using the old school technique since the age of 10. But, I'm here to tell you that there's
+        another...<br>
+        <a href="Blogs.html#blog1" class="float-right1">Read More &#10097;</a>
+      </div>
+      <div class="col3">
+        <h5>GRAB OUR NEWSLETTER</h5>
+        <form name="form1" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+          <input type="text" class="input" name="emri" placeholder="Name" />
+          <input type="text" class="input" name="emaili" placeholder="Email" />
+          <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
+        </form>
+      </div>
+    </div>
+    <div style="padding: 0 20px; height: 50px;">
+      <p style="float: left;"> Copyright &COPY; 2020 · All Rights Reserved · Gr. 6</p>
+      <p style="float: right;">Template by OS Templates</p>
+    </div>
+  </footer>
 </body>
 </html>
-
