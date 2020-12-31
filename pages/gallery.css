@@ -26,8 +26,13 @@ main {
   color: white;
   text-transform: uppercase;
   font-size: 100px;
+  font-family: myFirstFont;
   margin: 0;
   padding: 0;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.ttf);
 }
 .addText:before {
   content: "HOW TO: ";

@@ -47,8 +47,8 @@
             <nav>
                 <ul>
                     <li id="home" style="border: none; padding-left: 0;"><a href="../DarkDelight.html">Home </a> </li>
-                    <li><a href="#">style demo</a></li>
-                    <li><a href="#">full width</a></li>
+                    <li><a href="New.html">New</a></li>
+                    <li><a href="Sale.html">Sale</a></li>
                     <li><a href="#">Shop</a>
                         <ul>
                             <li><a href="Lips.html">Lips</a></li>
@@ -56,26 +56,26 @@
                             <li><a href="Face.html">Face</a></li>
                         </ul>
                     </li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
                     <li><a href="Feedback.html">Feedback</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="Login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <form method="POST" action="#" name="forma">
+        <form method="GET" action="http://www.randyconnolly.com/tests/process.php" name="forma">
             <fieldset>
                 <legend>help us improve</legend>
                 <table id="table1">
                     <tr>
                         <td>
                             <label><i class="fa fa-user"></i> Full Name *</label><br />
-                            <input type="text" name="emri" placeholder="Type your full name ..." />
+                            <input type="text" name="emri" placeholder="Type your full name ..." autocomplete="on" size="25" required autofocus/>
                         </td>
                         <td>
                             <label><i class="fa fa-envelope"></i> Email *</label><br />
-                            <input type="email" name="email" placeholder="dafina@example.com" />
+                            <input type="email" name="email" placeholder="dafina@example.com" autocomplete="on" required/>
                         </td>
                     </tr>
                     <tr>
@@ -92,16 +92,15 @@
                         </td>
                         <td>
                             <label>How often do you buy on our site?</label><br />
-                            <select name="q2">
-                                <option>Please select</option>
-                                <option>Daily</option>
-                                <option>Once a week</option>
-                                <option>Twice a week</option>
-                                <option>Once a month</option>
-                                <option>Twice a month</option>
-                                <option>Once a year</option>
-                                <option>Other</option>
-                            </select>
+                            <input list="opsionet" name="q2" id="datalist">
+                            <datalist id="opsionet">
+                                <option value="Daily">
+                                <option value="Once a week">
+                                <option value="Twice a week">
+                                <option value="Once a month">
+                                <option value="Once a year">
+                                <option value="Other"></option>
+                            </datalist>
                         </td>
                     </tr>
                     <tr>
@@ -112,7 +111,7 @@
                         </td>
                         <td>
                             <label>Overall, how satisfied are you with our website?</label><br />
-                            <input type="number" min="1" max="10" name="rate" step="1" placeholder="0" />
+                            <input type="number" min="1" max="10" name="rate" step="1"/>
                         </td>
                     </tr>
                     <tr>
@@ -204,10 +203,10 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <p>Drag the image back and forth between the two div elements.</p>
+                            <p>Are you a robot? (<small>Drag the image</small>)</p>
                             <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                <img src="images/robot.jpg" draggable="true" ondragstart="drag(event)" id="drag1"
-                                    width="88" height="31">
+                                <img src="images/robot.png" draggable="true" ondragstart="drag(event)" id="drag1"
+                                    width="70" height="50">
                             </div>
                             <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                         </td>
