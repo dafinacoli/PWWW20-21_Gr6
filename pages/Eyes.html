@@ -9,13 +9,23 @@
   <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script>
-    function addToCard(index) {
-      var values = document.getElementsByClassName('content');
-      for (var i = 0; i < values.length; i++) {
-        if (i == index - 1) {
-          values[i].childNodes[1].style.display = "none";
-          values[i].childNodes[3].style.display = "block";
+    function clickCounter(index) {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+          localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        } else {
+          localStorage.clickcount = 1;
         }
+        for (var i = 1; i <= 5; i++) {
+          if (i == index) {
+            document.getElementById("result" + i).innerHTML = "  : " + localStorage.clickcount;
+          }
+          else {
+            document.getElementById("result" + i).innerHTML = "";
+          }
+        }
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
       }
     }
   </script>
@@ -72,10 +82,10 @@
   </header>
   <main>
     <div class="rreshti">
-      <div class="column eyes">
-        <div class="content" id="pr7">
-          <button onclick="addToCard(1)"><b>Add to Cart</b></button>
-          <div class="check">&#10004;</div>
+      <div class="column">
+        <div class="content">
+          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+          <div id="result1" style="float: left;"></div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -84,13 +94,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e1.jpg" alt="Eye product" style="width:100%">
-          <p>Dazzleshadow Extreme<b>$20.00</b></p>
+          <p>Dazzleshadow Extreme<b><button onclick="clickCounter(1)"><b>$20.00</b></button></b></p>
         </div>
       </div>
-      <div class="column eyes">
-        <div class="content" id="pr8">
-          <button onclick="addToCard(2)"><b>Add to Cart</b></button>
-          <div class="check">&#10004;</div>
+      <div class="column">
+        <div class="content">
+          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+          <div id="result2" style="float: left;"></div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -99,13 +109,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e2.jpg" alt="Eye product" style="width:100%">
-          <p>Eye Shadow<b>$18.00</b></p>
+          <p>Eye Shadow<b><button onclick="clickCounter(2)"><b>$18.00</b></button></b></p>
         </div>
       </div>
-      <div class="column eyes">
-        <div class="content" id="pr9">
-          <button onclick="addToCard(3)"><b>Add to Cart</b></button>
-          <div class="check">&#10004;</div>
+      <div class="column">
+        <div class="content">
+          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+          <div id="result3" style="float: left;"></div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -114,13 +124,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e3.jpg" alt="Eye product" style="width:100%">
-          <p>Extra Dimension Eye Shadow<b>$20.00</b></p>
+          <p>Extra Dimension Eye Shadow<b><button onclick="clickCounter(3)"><b>$20.00</b></button></b></p>
         </div>
       </div>
-      <div class="column eyes">
-        <div class="content" id="pr10">
-          <button onclick="addToCard(4)"><b>Add to Cart</b></button>
-          <div class="check">&#10004;</div>
+      <div class="column">
+        <div class="content">
+          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+          <div id="result4" style="float: left;"></div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -129,13 +139,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e4.jpg" alt="Eye product" style="width:100%">
-          <p>Dazzleshadow<b>$15.00</b></p>
+          <p>Dazzleshadow<b><button onclick="clickCounter(4)"><b>$15.00</b></button></b></p>
         </div>
       </div>
-      <div class="column eyes">
-        <div class="content" id="pr11">
-          <button onclick="addToCard(5)"><b>Add to Cart</b></button>
-          <div class="check">&#10004;</div>
+      <div class="column">
+        <div class="content">
+          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+          <div id="result5" style="float: left;"></div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -144,7 +154,7 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e5.jpg" alt="Eye product" style="width:100%">
-          <p>Dazzleshadow Liquid<b>$30.00</b></p>
+          <p>Dazzleshadow Liquid<b><button onclick="clickCounter(5)"><b>$30.00</b></button></b></p>
         </div>
       </div>
     </div>
@@ -195,4 +205,5 @@
     </div>
   </footer>
 </body>
+
 </html>
