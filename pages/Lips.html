@@ -46,8 +46,8 @@
             <nav>
                 <ul>
                     <li id="home" style="border: none; padding-left: 0;"><a href="../DarkDelight.html">Home </a> </li>
-                    <li><a href="#">style demo</a></li>
-                    <li><a href="#">full width</a></li>
+                    <li><a href="New.html">New</a></li>
+                    <li><a href="Sale.html">Sale</a></li>
                     <li><a href="#">Shop</a>
                         <ul>
                             <li><a href="Lips.html">Lips</a></li>
@@ -55,9 +55,9 @@
                             <li><a href="Face.html">Face</a></li>
                         </ul>
                     </li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
                     <li><a href="Feedback.html">Feedback</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="Login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -168,14 +168,14 @@
                     You can contact us at:
                     <br>Tel: +111 1111111
                     <br>Fax: 1111 1111111
-                    <br>Email:darkdelight@domain.com
+                    <br><a id="mail" href="mailto:webmaster@example.com">Email:darkdelight@domain.com</a>
                 </address>
                 </p>
             </div>
             <div class="col2">
                 <h5>QUICK LINKS</h5>
                 <ul>
-                    <li><a href="../DarkDelight.html" target="_blank">Home Page</a></li>
+                    <li><a href="../DarkDelight.html">Home Page</a></li>
                     <li><a href="Lips.html">Shop Lip Products</a></li>
                     <li><a href="Eyes.html">Shop Eye Products</a></li>
                     <li><a href="Face.html">Shop Face Products</a></li>
@@ -184,7 +184,7 @@
             <div class="col2">
                 <h5>FROM THE BLOG</h5>
                 <p><b>Hair Steaming</b><br />
-                    <small>Posted by Doruntina</small>
+                    <small>Posted by <i>Doruntinë</i></small>
                 </p>
                 I've been using the old school technique since the age of 10. But, I'm here to tell you that there's
                 another...<br>
@@ -222,20 +222,21 @@
                 } else {
                     sessionStorage.clickcount = 1;
                 }
-                for (var i = 1; i <= 6; i++){
-                    if (i == index){
-                        document.getElementById("result"+i).innerHTML = "  : " + sessionStorage.clickcount;
+                for (var i = 1; i <= 6; i++) {
+                    if (i == index) {
+                        document.getElementById("result" + i).innerHTML = "  : " + sessionStorage.clickcount;
                     }
                     else {
-                        document.getElementById("result"+i).innerHTML = "";
+                        document.getElementById("result" + i).innerHTML = "";
                     }
                 }
             } else {
                 document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
             }
         }
-        
+
     </script>
 
 </body>
+
 </html>
