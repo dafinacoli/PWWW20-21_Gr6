@@ -70,7 +70,7 @@
             <div class="column lips">
                 <div class="content" id="pr1">
                     <img src="images/cart.png" alt="cart" style="float: left; border: white;">
-                    <div id="result" style="float: left;"></div>
+                    <div id="result1" style="float: left;"></div>
                     <div id="rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -79,13 +79,13 @@
                         <span class="fa fa-star"></span>
                     </div>
                     <img src="../Pages/images/l1.jpg" alt="Matte Lipstick - Please Me" style="width:100%">
-                    <p>Matte Lipstick - Please Me <b><button onclick="clickCounter()"><b>$29.00</b></button></b></p>
+                    <p>Matte Lipstick - Please Me<b><button onclick="clickCounter(1)"><b>$29.00</b></button></b></p>
                 </div>
             </div>
             <div class="column lips">
                 <div class="content" id="pr2">
-                    <button onclick="addToCard(2)"><b>Add to Cart</b></button>
-                    <div class="check">&#10004;</div>
+                    <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+                    <div id="result2" style="float: left;"></div>
                     <div id="rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -94,13 +94,13 @@
                         <span class="fa fa-star checked"></span>
                     </div>
                     <img src="../Pages/images/l2.jpg" alt="Retro Matte Lipstick" style="width:100%">
-                    <p>Retro Matte Lipstick<b>$33.00</b></p>
+                    <p>Retro Matte Lipstick<b><button onclick="clickCounter(2)"><b>$33.00</b></button></b></p>
                 </div>
             </div>
             <div class="column lips">
                 <div class="content" id="pr3">
-                    <button onclick="addToCard(3)"><b>Add to Cart</b></button>
-                    <div class="check">&#10004;</div>
+                    <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+                    <div id="result3" style="float: left;"></div>
                     <div id="rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -109,13 +109,13 @@
                         <span class="fa fa-star"></span>
                     </div>
                     <img src="../Pages/images/l3.jpg" alt="Lipglass" style="width:100%">
-                    <p>Lipglass<b>$22.00</b></p>
+                    <p>Lipglass<b><button onclick="clickCounter(3)"><b>$22.00</b></button></b></p>
                 </div>
             </div>
             <div class="column lips">
                 <div class="content" id="pr4">
-                    <button onclick="addToCard(4)"><b>Add to Cart</b></button>
-                    <div class="check">&#10004;</div>
+                    <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+                    <div id="result4" style="float: left;"></div>
                     <div id="rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -124,13 +124,13 @@
                         <span class="fa fa-star"></span>
                     </div>
                     <img src="../Pages/images/l4.jpg" alt="Lipglass" style="width:100%">
-                    <p>Lipglass<b>$29.00</b></p>
+                    <p>Lipglass<b><button onclick="clickCounter(4)"><b>$29.00</b></button></b></p>
                 </div>
             </div>
             <div class="column lips">
                 <div class="content" id="pr5">
-                    <button onclick="addToCard(5)"><b>Add to Cart</b></button>
-                    <div class="check">&#10004;</div>
+                    <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+                    <div id="result5" style="float: left;"></div>
                     <div id="rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -139,13 +139,13 @@
                         <span class="fa fa-star"></span>
                     </div>
                     <img src="../Pages/images/l5.jpg" alt="Lip Conditioner" style="width:100%">
-                    <p>Lip Conditioner (Tube)<b>$18.00</b></p>
+                    <p>Lip Conditioner (Tube)<b><button onclick="clickCounter(5)"><b>$18.00</b></button></b></p>
                 </div>
             </div>
             <div class="column lips">
                 <div class="content" id="pr6">
-                    <button onclick="addToCard(6)"><b>Add to Cart</b></button>
-                    <div class="check">&#10004;</div>
+                    <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+                    <div id="result6" style="float: left;"></div>
                     <div id="rating">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -154,7 +154,7 @@
                         <span class="fa fa-star "></span>
                     </div>
                     <img src="../Pages/images/l6.jpg" alt="Matte Lipstick - Please Me" style="width:100%">
-                    <p>Matte Lipstick - Velvet Teddy<b>$18.00</b></p>
+                    <p>Matte Lipstick - Velvet Teddy<b><button onclick="clickCounter(6)"><b>$18.00</b></button></b></p>
                 </div>
             </div>
         </div>
@@ -215,20 +215,27 @@
                 }
             }
         }
-        function clickCounter() {
+        function clickCounter(index) {
             if (typeof (Storage) !== "undefined") {
-                if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
                 } else {
-                    localStorage.clickcount = 1;
+                    sessionStorage.clickcount = 1;
                 }
-                document.getElementById("result").innerHTML = "  : " + localStorage.clickcount;
+                for (var i = 1; i <= 6; i++){
+                    if (i == index){
+                        document.getElementById("result"+i).innerHTML = "  : " + sessionStorage.clickcount;
+                    }
+                    else {
+                        document.getElementById("result"+i).innerHTML = "";
+                    }
+                }
             } else {
                 document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
             }
         }
+        
     </script>
 
 </body>
-
 </html>
