@@ -1,5 +1,5 @@
-var email = document.forms['form1']['email'];
-var password = document.forms['form1']['password'];
+var email = document.forms['forma1']['email'];
+var password = document.forms['forma1']['password'];
 
 var error_email = document.getElementById('err_email');
 var error_password = document.getElementById('err_password');
