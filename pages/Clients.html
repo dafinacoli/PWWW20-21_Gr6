@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What our clients say </title>
     <link rel="stylesheet" href="../DarkDelight.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-<style>
-    #background{
-        background-color: #1b1b1b;
-        height: 940px;
-    }
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
-    #rreshti h6{
-        color: white;
-        margin-bottom: 0;
-        margin-top: 10px;
-    }
 
-    main img{
-        float: left; 
-        padding-top: 10px; 
-        padding-left: 300px;
-    }
+    <style>
+        #rreshti h6 {
+            color: white;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
 
-    #heading{
-        padding-top: 10px;
-        padding-bottom: 20px;
-        color: white;
-    }
+        #heading img {
+            float: left;
+            padding-top: 10px;
+            padding-left: 300px;
+        }
 
-    #rreshti{
-        display: flex;
-        padding: 10px;
-        color: gray;
-    }
+        #heading {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            color: white;
+        }
 
-    #kolona1, #kolona2{
-        padding: 10px;
-    }
+        #rreshti {
+            display: flex;
+            padding: 10px;
+            color: gray;
+        }
 
-   #djatht{
-        position: relative;
-        width: 500px;
-    }
+        #kolona1,
+        #kolona2 {
+            padding: 10px;
+        }
 
-    .ndarja{
-        display: flex; 
-        padding: 10px;
-    }
+        #djatht {
+            position: relative;
+            width: 500px;
+        }
 
-    .k{ position: relative;
-        padding-right: 10px ;
-        width: 250px;
-    }
+        .ndarja {
+            display: flex;
+            padding: 10px;
+        }
 
-    #djatht p{
-        margin-top: 10px;
-    }
+        .k {
+            position: relative;
+            padding-right: 10px;
+            width: 250px;
+        }
 
-    #roww1{
-        position: relative;
-        height: 260px;
-    }
-    audio{
-        width: 200px;
-   }
-   .break {
-    word-wrap: normal;
-   }
+        #djatht p {
+            margin-top: 10px;
+        }
 
-</style>
+        #roww1 {
+            position: relative;
+            height: 260px;
+        }
+
+        audio {
+            width: 200px;
+        }
+
+        .break {
+            word-wrap: normal;
+        }
+    </style>
 
 </head>
 
@@ -83,123 +85,215 @@
                 <h1>DarkDelight</h1>
                 <h6>Free PSD Website Template</h6>
             </div>
-    
-         
-            <div style = "margin-top: auto; margin-bottom: auto;">
-                <div id = socialMedia>
-                    <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin" style="background: #007bb5; color: white;"></a>
-                    <a href="https://twitter.com/" target="_blank" class="fa fa-twitter" style="background: #55ACEE; color: white;"></a>
-                    <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank" style="background: #cb2027; color: white;"></a>
-                    <a href="http://plus.google.com/" class="fa fa-google-plus" target="_blank" style="background: #222425; color: white;"></a>
-                    <a href="https://rss.com/" class="fa fa-rss" target="_blank" style="background: #ff6600; color: white;"></a>
+
+            <div style="margin-top: auto; margin-bottom: auto;">
+                <div id="socialMedia">
+                    <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"
+                        style="background: #007bb5; color: white;"></a>
+                    <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"
+                        style="background: #55ACEE; color: white;"></a>
+                    <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank"
+                        style="background: #cb2027; color: white;"></a>
+                    <a href="http://plus.google.com/" class="fa fa-google-plus" target="_blank"
+                        style="background: #222425; color: white;"></a>
+                    <a href="https://rss.com/" class="fa fa-rss" target="_blank"
+                        style="background: #ff6600; color: white;"></a>
                 </div>
                 <div style="float: right;">
                     <form id="search" action="">
                         <input type="text" placeholder="" name="search">
-                        <button type="submit"><i class="fa fa-search" style="width: 1px; margin-right: 10px;"></i></button>
+                        <button type="submit"><i class="fa fa-search"
+                                style="width: 1px; margin-right: 10px;"></i></button>
                     </form>
                 </div>
             </div>
         </div>
-    
+
         <div id="nav">
             <nav>
                 <ul>
-                    <li id="home"><a href="../DarkDelight.html">Home </a> </li> 
-                    <li><a href="#">style demo</a></li>
-                    <li><a href="#">full width</a></li>
+                    <li id="home" style="border: none; padding-left: 0;"><a href="../DarkDelight.html">Home </a> </li>
+                    <li><a href="New.html">New</a></li>
+                    <li><a href="Sale.html">Sale</a></li>
                     <li><a href="#">Shop</a>
-                        <ul>    
+                        <ul>
                             <li><a href="Lips.html">Lips</a></li>
                             <li><a href="Eyes.html">Eyes</a></li>
                             <li><a href="Face.html">Face</a></li>
                         </ul>
                     </li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
                     <li><a href="Feedback.html">Feedback</a></li>
-                    <li><a href="#">Login</a></li>
-                    
+                    <li><a href="Login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-<main>
-    <div id="background">
-        <div id="heading"> 
-            <img src="../images/quatation.png" /> 
-            <h1>What our clients say</h1></div>
+    <main>
+        <div id="heading">
+            <img src="../images/quatation.png" />
+            <h1>What our clients say</h1>
+        </div>
 
         <div id="rreshti">
             <div id="kolona1">
-                
+
                 <h1 style="color: white;">Our clients say</h1>
                 <p>More than anything else at <abbr title="Dark Delight Cosmetics">DDC</abbr>, we value our clients.
-                   And so what our clients say about our business is our motivation.
-                   We are delighted to share with you some of our latest reviews.</p>
+                    And so what our clients say about our business is our motivation.
+                    We are delighted to share with you some of our latest reviews.</p>
+                <div >
+                    <div id="map" style="height: 300px; width: 400px;"></div>
+                    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                    <div id="koordinatat"></div>
+                </div>
             </div>
             <div id="kolona2">
-                <h6 style="color: gray;">SUCH WONDERFUL AND PROFESSIONAL SALON – HAVE BEEN COMING TO DARKDELIGHT FOR YEARS AND WILL BE GOING FOR MANY MORE YEARS TO COME! THANKS FOR ALWAYS BEING AMAZING!</h6>
+                <h6 style="color: gray;">SUCH WONDERFUL AND PROFESSIONAL SALON – HAVE BEEN COMING TO DARKDELIGHT FOR
+                    YEARS AND WILL BE GOING FOR MANY MORE YEARS TO COME! THANKS FOR ALWAYS BEING AMAZING!</h6>
                 <h6> KAREN </h6>
                 <hr>
 
                 <div id="djatht">
                     <div class="ndarja" id="roww1" style="margin-left: 0px;">
-                    <div class="k">
-                        <h6>Angela</h6>
-                        <p class = "break">Just thought I’d let you know what a great experience I had. 
-                           It was the first time I’d ever been to the salon as I have just moved to Dublin but
-                           I will definitely be back when I next need an appointment as it was an awesome experience.</p>
-
-                        
+                        <div class="k" id="c1">
+                            <h6></h6>
+                            <p class="break"></p>
+                        </div>
+                        <div class="k" id="c2">
+                            <h6></h6>
+                            <p class="break"></p>
+                        </div>
                     </div>
-                    <div class="k">
-                        <h6>Kate</h6>
-                        <p class = "break">I really wanted to take some time out to say how lovely my experience was at your DarkDelight cosmetic. 
-                           I came in for a spray tan which I was very nervous about but was put at ease and made feel very comfortable by Denise. 
-                           She was very professional and even gave me advice I never considered before.
-                           It is can be hard to find a good salon these days let alone an excellent beautician!</p>
-                        
-                    </div>
-                </div>
                     <div class="ndarja" id="roww2">
-                        <div class="k">
-                            <h6>Marie</h6>
-                            <p class = "break"> DarkDelight cosmetic is just perfect! I am so glad that, finally, I could find all the beauty services concentrated in only one place: 
-                                manicure, pedicure, face and body treatment, waxing , make up and so on…so it is very convenient! 
-                                This is a very welcoming environment here with Denise. She is very friendly and professional and uses trustful products.
-                                Easy parking and great service at the right price.</p>
+                        <div class="k" id="c3">
+                            <h6></h6>
+                            <p class="break"></p>
                         </div>
-                        <div class="k">
-                            <h6>Barbara</h6>
-                            <p class = "break">Wonderful, lovely therapist and very nice relaxing treatment.</p>
-
+                        <div class="k" id="c4">
+                            <h6></h6>
+                            <p class="break"></p>
                         </div>
-
                     </div>
                     <div class="ndarja" id="roww3">
                         <div class="k">
                             <h6>Lee</h6>
                             <audio controls>
-                                <source src="audio/Kylie.mp3" type="audio/mpeg"/>
+                                <source src="audio/Kylie.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
                         <div class="k">
                             <h6>Ashley</h6>
                             <audio controls>
-                                <source src="audio/Kylie2.mp3" type="audio/mpeg"/>
+                                <source src="audio/Kylie2.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
-
                     </div>
-                    </div>
-
                 </div>
-
             </div>
         </div>
+    </main>
+    <footer>
+        <div id="row3">
+            <div class="col1">
+                <h5>CONTACT DETAILS</h5>
+                <p>
+                <address>
+                    You can contact us at:
+                    <br>Tel: +111 1111111
+                    <br>Fax: 1111 1111111
+                    <br><a id="mail" href="mailto:webmaster@example.com">Email:darkdelight@domain.com</a>
+                </address>
+                </p>
+            </div>
+            <div class="col2">
+                <h5>QUICK LINKS</h5>
+                <ul>
+                    <li><a href="../DarkDelight.html">Home Page</a></li>
+                    <li><a href="Lips.html">Shop Lip Products</a></li>
+                    <li><a href="Eyes.html">Shop Eye Products</a></li>
+                    <li><a href="Face.html">Shop Face Products</a></li>
+                </ul>
+            </div>
+            <div class="col2">
+                <h5>FROM THE BLOG</h5>
+                <p><b>Hair Steaming</b><br />
+                    <small>Posted by <i>Doruntinë</i></small>
+                </p>
+                I've been using the old school technique since the age of 10. But, I'm here to tell you that there's
+                another...<br>
+                <a href="Blogs.html#blog1" class="float-right1">Read More &#10097;</a>
+            </div>
+            <div class="col3">
+                <h5>GRAB OUR NEWSLETTER</h5>
+                <form name="form1" action="#" method="POST">
+                    <input type="text" class="input" name="emri" placeholder="Name" />
+                    <input type="text" class="input" name="emaili" placeholder="Email" />
+                    <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
+                </form>
+            </div>
+        </div>
+        <div style="padding: 0 20px; height: 50px;">
+            <p style="float: left;"> Copyright &COPY; 2020 · All Rights Reserved · Gr. 6</p>
+            <p style="float: right;">Template by OS Templates</p>
+        </div>
+    </footer>
+    <script>
+        function Client(firstname, lastName, age, comment) {
+            this.firstname = firstname;
+            this.lastName = lastName;
+            this.age = age;
+            this.comment = comment;
+        }
 
-    </div>
-</main>
+        Client.prototype.name = function () {
+            return this.firstname + " " + this.lastName;
+        };
+
+        Client.prototype.history = function () {
+            return this.firstname + " " + this.lastName + ", " + this.age;
+        };
+
+        var client1 = new Client("Angela", "Simpson", 24, "Just thought I’d let you know what a great experience I had. It was the first time I’d ever been to the salon as I have just moved to Dublin but I will definitely be back when I next need an appointment as it was an awesome experience.")
+        var client2 = new Client("Kate", "Smith", 44, "I really wanted to take some time out to say how lovely my experience was at your DarkDelight cosmetic. I came in for a spray tan which I was very nervous about but was put at ease and made feel very comfortable by Denise. She was very professional and even gave me advice I never considered before. It is can be hard to find a good salon these days let alone an excellent beautician!");
+        var client3 = new Client("Marie", "Simpson", 18, "DarkDelight cosmetic is just perfect! I am so glad that, finally, I could find all the beauty services concentrated in only one place: manicure, pedicure, face and body treatment, waxing , make up and so on…so it is very convenient! This is a very welcoming environment here with Denise. She is very friendly and professional and uses trustful products. Easy parking and great service at the right price.")
+        var client4 = new Client("Barbara", "Simpson", 50, "Wonderful, lovely therapist and very nice relaxing treatment.")
+
+        //document.getElementById("c1").children[0].innerHTML = client1.name();
+        //document.getElementById("c1").children[0].innerHTML = client1.history();
+        document.getElementById("c1").children[0].innerHTML = client1.firstname;
+        document.getElementById("c1").children[1].innerHTML = client1.comment;
+        document.getElementById("c2").children[0].innerHTML = client2.firstname;
+        document.getElementById("c2").children[1].innerHTML = client2.comment;
+        document.getElementById("c3").children[0].innerHTML = client3.name();
+        document.getElementById("c3").children[1].innerHTML = client3.comment;
+        document.getElementById("c4").children[0].innerHTML = client4.history();
+        document.getElementById("c4").children[1].innerHTML = client4.comment;
+
+        (() => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(success, error);
+            } else {
+                alert("Geolocation is not supported by this browser");
+            }
+        })();
+
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            getMap(latitude, longitude);
+        }
+        function error() {
+            alert("Unable to retrieve location");
+        }
+        function getMap(latitude, longitude) {
+            const map = L.map("map").setView([latitude, longitude], 16);
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+            L.marker([latitude, longitude]).addTo(map);
+            document.getElementById("koordinatat").innerHTML ="  Your coordinates: " + latitude + " , " + longitude;
+        }
+    </script>
 </body>
+
 </html>
