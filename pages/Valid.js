@@ -14,7 +14,7 @@ function validated() {
     error_password.style.display = "none";
     try { 
         if(email.value == "")  throw "Please fill up your email";
-        if(!(email.value.match(emailPattern))) throw "This email doesn't exists";
+        if(emailPattern.exec(email.value) == null) throw "This email doesn't exists"; //Kthen null nese plotesohet, perndryshe nese permbahet ndonje element qe nuk gjendet ne emailPattern ktheet null
       }
       catch(err) {
         error_email.innerHTML = err;

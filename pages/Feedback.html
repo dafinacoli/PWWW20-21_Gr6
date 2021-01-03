@@ -63,7 +63,7 @@
         </div>
     </header>
     <main>
-        <form method="POST" action="#" id="forma" name="form1" onsubmit="return validated()">
+        <form method="POST" action="#" id="forma" name="forma1" onsubmit="return validated()">
             <fieldset>
                 <legend>help us improve</legend>
                 <table id="table1">
@@ -75,7 +75,7 @@
                         </td>
                         <td>
                             <label><i class="fa fa-envelope"></i> Email *</label><br />
-                            <input type="text" name="email" placeholder="dafina@example.com" autocomplete="on"
+                            <input type="email" name="email" placeholder="dafina@example.com" autocomplete="on"
                                 required />
                         </td>
                     </tr>
@@ -93,7 +93,7 @@
                         </td>
                         <td>
                             <label>How often do you buy on our site?</label><br />
-                            <input list="opsionet" name="q2" id="datalist">
+                            <input list="opsionet" name="q2" id="datalist" pattern="^(Daily|Once a week|Twice a week|Once a month|Once a year|Other)$">
                             <datalist id="opsionet">
                                 <option value="Daily">
                                 <option value="Once a week">
@@ -307,13 +307,20 @@
             document.getElementById("sub").disabled = false; // nese e bene drag foton, butoni behet enable
         }
         function validated() {
-            var emri = document.forms["form1"]["emri"].value;
+            var emri = document.forms["forma1"]["emri"].value;
+            var likeA = document.forms["forma1"]["like"].value;
+            var dislikeA = document.forms["forma1"]["dislike"].value;
             var patt = /\s/g; //global search
-            var mesazhi;
+            var patt2 = /[^a-z ]/gi; //Kerkon a ka elemente qe nuk i takojn a-z dhe
+            console.log(likeA.match(patt2));
+            console.log(!emri.match(patt2));
             try {
-                if (!patt.test(emri.trim() + "")) throw "Please enter your full name";
-                else if (emri == "") throw "Please enter your name";
-                else if (emri < 4) throw "Please enter your full name";
+                if (!patt.test(emri.trim() + "")) throw "Please enter your full name!";
+                else if (emri == "") throw "Please enter your name!";
+                else if (emri < 4) throw "Please enter your full name!";
+                else if (emri.match(patt2)) throw "Please enter valid name!";
+                else if (likeA.match(patt2)) throw "Please use only letters to describe what you like about us!";
+                else if (dislikeA.match(patt2)) throw "Please use only letters to describe what you don't like about us!";
 
             }
             catch (err) {

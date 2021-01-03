@@ -21,7 +21,8 @@ function draw(element) {
     var ctx = document.getElementById(element).getContext('2d');
     ctx.lineWidth = 10;
     ctx.lineJoin = 'miter';
-    for (var i = 0; i < 2; i++) {
+    var i = 0;
+    while (i < 2) {
         ctx.beginPath();
         ctx.moveTo(-5, 5 + i * 40);
         ctx.lineTo(65, 45 + i * 40);
@@ -31,6 +32,7 @@ function draw(element) {
         ctx.lineTo(345, 45 + i * 40);
         ctx.lineTo(415, 5 + i * 40);
         ctx.stroke();
+        i++;
     }
 }
 //konstruktori
