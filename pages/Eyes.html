@@ -9,24 +9,34 @@
   <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script>
+    var values = document.getElementsByClassName('content');
+    function addToCard(index) {
+      for (var i = 0; i < values.length; i++) {
+        if (i == index - 6 - 1) {
+          values[i].childNodes[1].style.display = "none";
+          values[i].childNodes[3].style.display = "block";
+        }
+      }
+      clickCounter(index);
+    }
     function clickCounter(index) {
       if (typeof (Storage) !== "undefined") {
-        if (localStorage.clickcount) {
+        if (localStorage.getItem(index) == "added") {
+          localStorage.clickcount = Number(localStorage.clickcount);
+        }
+        else if (localStorage.clickcount) {
           localStorage.clickcount = Number(localStorage.clickcount) + 1;
         } else {
           localStorage.clickcount = 1;
         }
-        for (var i = 1; i <= 5; i++) {
-          if (i == index) {
-            document.getElementById("result" + i).innerHTML = "  : " + localStorage.clickcount;
-          }
-          else {
-            document.getElementById("result" + i).innerHTML = "";
-          }
-        }
+        document.getElementById("result1").innerHTML = "  : " + localStorage.clickcount;
+
+
       } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
       }
+      localStorage.setItem("" + index, "added");
+
     }
   </script>
 </head>
@@ -52,7 +62,7 @@
           <a href="https://rss.com/" class="fa fa-rss" target="_blank" style="background: #ff6600; color: white;"></a>
         </div>
         <div style="float: right;">
-          <form id="search" action="">
+          <form id="search" action="#" method="GET">
             <input type="text" placeholder="" name="search">
             <button type="submit"><i class="fa fa-search" style="width: 1px; margin-right: 10px;"></i></button>
           </form>
@@ -83,12 +93,16 @@
   <main>
     <div style="padding: 0 20px 0 20px;">
       <img src="images/eyes.jpg" width="100%">
-  </div>
+      <div style="position: absolute; top: 250px">
+        <img src="images/cart.png" alt="cart" style="float: left">
+        <div id="result1" style="float: left;"></div>
+      </div>
+    </div>
     <div class="rreshti">
       <div class="column">
         <div class="content">
-          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
-          <div id="result1" style="float: left;"></div>
+          <button onclick="addToCard(7)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -97,13 +111,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e1.jpg" alt="Eye product" style="width:100%">
-          <p>Dazzleshadow Extreme<b><button onclick="clickCounter(1)"><b>$20.00</b></button></b></p>
+          <p>Dazzleshadow Extreme<b>$20.00</b></p>
         </div>
       </div>
       <div class="column">
         <div class="content">
-          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
-          <div id="result2" style="float: left;"></div>
+          <button onclick="addToCard(8)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -112,13 +126,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e2.jpg" alt="Eye product" style="width:100%">
-          <p>Eye Shadow<b><button onclick="clickCounter(2)"><b>$18.00</b></button></b></p>
+          <p>Eye Shadow<b>$18.00</b></p>
         </div>
       </div>
       <div class="column">
         <div class="content">
-          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
-          <div id="result3" style="float: left;"></div>
+          <button onclick="addToCard(9)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -127,13 +141,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e3.jpg" alt="Eye product" style="width:100%">
-          <p>Extra Dimension Eye Shadow<b><button onclick="clickCounter(3)"><b>$20.00</b></button></b></p>
+          <p>Extra Dimension Eye Shadow<b>$20.00</b></p>
         </div>
       </div>
       <div class="column">
         <div class="content">
-          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
-          <div id="result4" style="float: left;"></div>
+          <button onclick="addToCard(10)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -142,13 +156,13 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e4.jpg" alt="Eye product" style="width:100%">
-          <p>Dazzleshadow<b><button onclick="clickCounter(4)"><b>$15.00</b></button></b></p>
+          <p>Dazzleshadow<b>$15.00</b></p>
         </div>
       </div>
       <div class="column">
         <div class="content">
-          <img src="images/cart.png" alt="cart" style="float: left; border: white;">
-          <div id="result5" style="float: left;"></div>
+          <button onclick="addToCard(11)"><b>Add to Cart</b></button>
+          <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -157,7 +171,7 @@
             <span class="fa fa-star "></span>
           </div>
           <img src="../Pages/images/e5.jpg" alt="Eye product" style="width:100%">
-          <p>Dazzleshadow Liquid<b><button onclick="clickCounter(5)"><b>$30.00</b></button></b></p>
+          <p>Dazzleshadow Liquid<b>$30.00</b></p>
         </div>
       </div>
     </div>
@@ -187,7 +201,7 @@
       <div class="col2">
         <h5>FROM THE BLOG</h5>
         <p><b>Hair Steaming</b><br />
-          <small>Posted by <i>Doruntinë</i></small>
+          <small>Posted by <i>Doruntin&#235;</i></small>
         </p>
         I've been using the old school technique since the age of 10. But, I'm here to tell you that there's
         another...<br>
@@ -195,11 +209,28 @@
       </div>
       <div class="col3">
         <h5>GRAB OUR NEWSLETTER</h5>
-        <form name="form1" action="http://www.randyconnolly.com/tests/process.php" method="POST">
-          <input type="text" class="input" name="emri" placeholder="Name" />
-          <input type="text" class="input" name="emaili" placeholder="Email" />
+        <form id="form1" name="form1" action="#" method="POST" onsubmit="return valido()">
+          <input type="text" class="input" name="emri" placeholder="Name" required />
+          <input type="email" class="input" name="emaili" placeholder="Email" required />
           <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
         </form>
+        <script>
+          function valido() {
+            var emri = document.forms["form1"]["emri"].value;
+            var patt = /\s/g; //global search
+            var mesazhi;
+            try {
+              if (!patt.test(emri.trim() + "")) throw "Please enter your full name";
+              else if (emri == "") throw "Please enter your name";
+              else if (emri < 4) throw "Please enter your full name";
+
+            }
+            catch (err) {
+              window.alert(err);
+              return false;
+            }
+          }
+        </script>
       </div>
     </div>
     <div style="padding: 0 20px; height: 50px;">
@@ -208,5 +239,19 @@
     </div>
   </footer>
 </body>
+<script>
+  //kontrollon a jane vendosur produktet ne shporte
+  var values = document.getElementsByClassName('content');
+  for (var i = 6; i < 11; i++) {
+    if (localStorage.getItem(i + 1) == "added") {
+      values[i - 6].childNodes[1].style.display = "none";
+      values[i - 6].childNodes[3].style.display = "block";
+    }
+  }
+  if (localStorage.clickcount >= 1)
+    document.getElementById("result1").innerHTML = "  : " + localStorage.clickcount;
+  else
+    document.getElementById("result1").innerHTML = "  : 0";
+</script>
 
 </html>

@@ -34,7 +34,7 @@
                         style="background: #ff6600; color: white;"></a>
                 </div>
                 <div style="float: right;">
-                    <form id="search" action="">
+                    <form id="search" action="#" method="GET">
                         <input type="text" placeholder="" name="search">
                         <button type="submit"><i class="fa fa-search"
                                 style="width: 1px; margin-right: 10px;"></i></button>
@@ -139,7 +139,7 @@
             <div class="col2">
                 <h5>FROM THE BLOG</h5>
                 <p><b>Hair Steaming</b><br />
-                    <small>Posted by <i>Doruntinë</i></small>
+                    <small>Posted by <i>Doruntin&#235;</i></small>
                 </p>
                 I've been using the old school technique since the age of 10. But, I'm here to tell you that there's
                 another...<br>
@@ -147,11 +147,28 @@
             </div>
             <div class="col3">
                 <h5>GRAB OUR NEWSLETTER</h5>
-                <form name="form1" action="#" method="POST">
-                    <input type="text" class="input" name="emri" placeholder="Name" />
-                    <input type="text" class="input" name="emaili" placeholder="Email" />
+                <form id="form1" name="form1" action="#" method="POST" onsubmit="return valido()">
+                    <input type="text" class="input" name="emri" placeholder="Name" required />
+                    <input type="email" class="input" name="emaili" placeholder="Email" required />
                     <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
                 </form>
+                <script>
+                    function valido() {
+                        var emri = document.forms["form1"]["emri"].value;
+                        var patt = /\s/g; //global search
+                        var mesazhi;
+                        try {
+                            if (!patt.test(emri.trim() + "")) throw "Please enter your full name";
+                            else if (emri == "") throw "Please enter your name";
+                            else if (emri < 4) throw "Please enter your full name";
+
+                        }
+                        catch (err) {
+                            window.alert(err);
+                            return false;
+                        }
+                    }
+                </script>
             </div>
         </div>
         <div style="padding: 0 20px; height: 50px;">

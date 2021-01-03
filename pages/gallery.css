@@ -32,7 +32,7 @@
 .addText:before {
   content: "HOW TO: ";
 }
-p {
+main p {
   text-align: center;
   color:white;
 }
