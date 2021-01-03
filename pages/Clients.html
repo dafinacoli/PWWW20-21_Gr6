@@ -143,53 +143,55 @@
                 <p>More than anything else at <abbr title="Dark Delight Cosmetics">DDC</abbr>, we value our clients.
                     And so what our clients say about our business is our motivation.
                     We are delighted to share with you some of our latest reviews.</p>
-                <div >
+                <div>
                     <div id="map" style="height: 300px; width: 400px;"></div>
                     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
                     <div id="koordinatat"></div>
                 </div>
             </div>
             <div id="kolona2">
-                <h6 style="color: gray;">SUCH WONDERFUL AND PROFESSIONAL SALON – HAVE BEEN COMING TO DARKDELIGHT FOR
-                    YEARS AND WILL BE GOING FOR MANY MORE YEARS TO COME! THANKS FOR ALWAYS BEING AMAZING!</h6>
-                <h6> KAREN </h6>
+                <aside>
+                    <h6 style="color: gray;">SUCH WONDERFUL AND PROFESSIONAL SALON – HAVE BEEN COMING TO DARKDELIGHT FOR
+                        YEARS AND WILL BE GOING FOR MANY MORE YEARS TO COME! THANKS FOR ALWAYS BEING AMAZING!</h6>
+                    <h6> KAREN </h6>
+                </aside>
                 <hr>
 
                 <div id="djatht">
-                    <div class="ndarja" id="roww1" style="margin-left: 0px;">
-                        <div class="k" id="c1">
+                    <article class="ndarja" id="roww1" style="margin-left: 0px;">
+                        <section class="k" id="c1">
                             <h6></h6>
                             <p class="break"></p>
-                        </div>
-                        <div class="k" id="c2">
+                        </section>
+                        <section class="k" id="c2">
                             <h6></h6>
                             <p class="break"></p>
-                        </div>
-                    </div>
-                    <div class="ndarja" id="roww2">
-                        <div class="k" id="c3">
+                        </section>
+                    </article>
+                    <article class="ndarja" id="roww2">
+                        <section class="k" id="c3">
                             <h6></h6>
                             <p class="break"></p>
-                        </div>
-                        <div class="k" id="c4">
+                        </section>
+                        <section class="k" id="c4">
                             <h6></h6>
                             <p class="break"></p>
-                        </div>
-                    </div>
-                    <div class="ndarja" id="roww3">
-                        <div class="k">
+                        </section>
+                    </article>
+                    <article class="ndarja" id="roww3">
+                        <section class="k">
                             <h6>Lee</h6>
                             <audio controls>
                                 <source src="audio/Kylie.mp3" type="audio/mpeg" />
                             </audio>
-                        </div>
-                        <div class="k">
+                        </section>
+                        <section class="k">
                             <h6>Ashley</h6>
                             <audio controls>
                                 <source src="audio/Kylie2.mp3" type="audio/mpeg" />
                             </audio>
-                        </div>
-                    </div>
+                        </section>
+                    </darticleiv>
                 </div>
             </div>
         </div>
@@ -291,7 +293,7 @@
             const map = L.map("map").setView([latitude, longitude], 16);
             L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
             L.marker([latitude, longitude]).addTo(map);
-            document.getElementById("koordinatat").innerHTML ="  Your coordinates: " + latitude + " , " + longitude;
+            document.getElementById("koordinatat").innerHTML = "  Your coordinates: " + latitude + " , " + longitude;
         }
     </script>
 </body>
