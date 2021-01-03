@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sale</title>
     <link rel="stylesheet" href="../DarkDelight.css">
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -15,14 +14,6 @@
             float: left;
         }
 
-        /* #myDiv {
-            border: 1px solid greenyellow;
-            margin-left: 120px;
-            margin-top: 100px;
-            transform: rotateZ(90deg);
-            font-size: 40px;
-            color: white;
-        } */
         #eyes {
             transform: translate(160px, 0);
         }
@@ -125,6 +116,15 @@
             color: white;
         }
 
+        #math {
+            border: 2px solid;
+            padding: 20px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+        }
+
         #resize p {
             font-style: oblique;
         }
@@ -214,8 +214,6 @@
 
         <aside style="margin-bottom: 210px; margin-top: 40px;">
 
-            <!-- <div id="myDiv">Hurry Up</div> -->
-
             <svg>
                 <text x="161" y="40" font-family="Verdana" font-size="15" fill="white">BUY NOW: </text>
                 <rect x="160" y="60" width="80" height="40" fill="#c9181a" />
@@ -224,7 +222,7 @@
                         fill="white">LIPS</text></a>
             </svg>
             <div id="eyes"><a class="link" href="Eyes.html"> Eyes </a></div>
-            <div id="face"><a class="link" href="Eyes.html"> Face </a></div>
+            <div id="face"><a class="link" href="Face.html"> Face </a></div>
         </aside>
 
         <div>
@@ -250,12 +248,13 @@
             <br>
             <div id="resize">
                 <p>Prices:</p>
-                <p>Grinch Pressed Powder Palette- $40⁠</p>
-                <p>4 Piece Shadow Stick Set - $24</p>
-                <p>Grinch Matte Lip Kit- $29</p>
-                <p>Littlest of Whos Kylighter- $20⁠</p>
-                <p>Complete Holiday Collection Bundle- $265⁠</p>
-                <p>Calculate products: </p><br>
+                <p>⁠</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>Complete Holiday Collection Bundle- $⁠</p>
+                <p id="maxPrice">Highest price from Grinch Collection: </p>
+                <p>Calculate products: </p>
                 <form action="#" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
                     <input type="number" id="a" name="a" value="40">$ +
                     <input type="number" id="b" name="b" value="24">$
@@ -265,24 +264,46 @@
                 </form>
             </div>
             <br>
-            <button class="button" type="submit" onclick="show('r')">Rotate</button>
-            <button class="button" type="submit" onclick="show('s')">Skew</button>
-            <button class="button" type="submit" onclick="show('x')">Rotate X</button>
-            <button class="button" type="submit" onclick="show('y')">Rotate Y</button>
-            <button class="button" type="submit" onclick="show('z')">Rotate Z</button>
-            <section class="content-body">
-                <div id='rotateX'>Rotate X 180deg</div>
-                <div id='rotateY'>Rotate Y 180deg</div>
-                <div id='skew'>Skew 340deg</div>
-                <div id='rotate'>Rotate 340deg</div>
-                <div id='rotateZ'>Rotate Z 180deg</div>
-            </section>
+            <div id="math">
+                <p id="maxValue"></p>
+                <input type="text"
+                    style="background-color: transparent; border: 1px solid #d24260; width: 250px; height: 25px; padding: 0 10px; border-radius: 5px; color: white;"
+                    placeholder="Enter a number between 1 and 100..." id="funkMatematikore">
+                <input class="button" type="submit" value="Calculate" onclick="valido()" style="width:90px;" /><br>
+                <div style="margin-left: 30px;">
+                    <dl style="text-align: start;">
+                        <dt>Math.SQRT:</dt>
+                        <dd id="1"></dd>
+                        <dt>Math.PI:</dt>
+                        <dd id="2"></dd>
+                        <dt>Math.sin:</dt>
+                        <dd id="3"></dd>
+                        <dt>Math.cos:</dt>
+                        <dd id="4"></dd>
+                    </dl>
+                </div>
+
+                <label>Calculate the square of a random number: </label>
+                <input class="button" type="submit" id="submit" value="Go" style="width:90px;" /><br>
+                <div id="text"></div>
+                <br>
+                <button class="button" type="submit" onclick="show('r')">Rotate</button>
+                <button class="button" type="submit" onclick="show('s')">Skew</button>
+                <button class="button" type="submit" onclick="show('x')">Rotate X</button>
+                <button class="button" type="submit" onclick="show('y')">Rotate Y</button>
+                <button class="button" type="submit" onclick="show('z')">Rotate Z</button>
+                <section class="content-body">
+                    <div id='rotateX'>Rotate X 180deg</div>
+                    <div id='rotateY'>Rotate Y 180deg</div>
+                    <div id='skew'>Skew 340deg</div>
+                    <div id='rotate'>Rotate 340deg</div>
+                    <div id='rotateZ'>Rotate Z 180deg</div>
+                </section>
+            </div>
         </div>
         <br><br>
         <div id="demo"></div>
-        <div class="skadimi" id="skadimiL"></div>
-        <div class="skadimi" id="skadimiE"></div>
-        <div class="skadimi" id="skadimiF"></div>
+        <div class="skadimi" id="skadimi"></div>
 
     </main>
     <footer>
@@ -318,7 +339,7 @@
             </div>
             <div class="col3">
                 <h5>GRAB OUR NEWSLETTER</h5>
-                <form name="form1" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+                <form name="form1" action="#" method="POST">
                     <input type="text" class="input" name="emri" placeholder="Name" />
                     <input type="text" class="input" name="emaili" placeholder="Email" />
                     <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
