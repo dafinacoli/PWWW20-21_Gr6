@@ -33,11 +33,6 @@ function draw(element) {
         ctx.stroke();
     }
 }
-
-//koha
-var d = new Date();
-document.getElementById("demo").innerHTML = d;
-
 //konstruktori
 function Skadimi(data, produkti) {
     this.data = data;
@@ -53,9 +48,7 @@ d = new Date("December 25, 2020");
 d.setMonth(d.getMonth() + 2);
 var ofertaF = new Skadimi(d.toLocaleDateString(), "Face");
 
-document.getElementById("skadimiL").innerHTML = ofertaL.produkti + " sale expires " + ofertaL.data;
-document.getElementById("skadimiE").innerHTML = ofertaE.produkti + " sale expires " + ofertaE.data;
-document.getElementById("skadimiF").innerHTML = ofertaF.produkti + " sale expires " + ofertaF.data;
+document.getElementById("skadimi").innerHTML = ofertaL.produkti + " sale expires " + ofertaL.data;
 //metoda nga e cila shfaqen transformimet 2D dhe 3D
 function show(element) {
     if (element == 'x') {
@@ -93,4 +86,60 @@ function show(element) {
         document.getElementById("rotate").style.display = "none";
         document.getElementById("rotateZ").style.display = "block";
     }
+}
+function Products(id, type, color, price, description) {
+    this.id = id;
+    this.type = type;
+    this.color = color;
+    this.price = price;
+    this.description = description;
+}
+
+var p1 = new Products(1, "Powder", "white", 40, "Grinch Pressed Powder Palette");
+var p2 = new Products(2, "Shadow", "red", 39, "4 Piece Shadow Stick Set");
+var p3 = new Products(3, "Lip Kit", "red", 24, "Grinch Matte Lip Kit");
+var p4 = new Products(4, "Highlighter", "rose", 29, "Littlest of Whos Kylighter");
+
+document.getElementById("resize").children[1].innerHTML = p1.id + "." + p1.description + " - $" + p1.price;
+document.getElementById("resize").children[2].innerHTML = p2.id + "." + p2.description + " - $" + p2.price;
+document.getElementById("resize").children[3].innerHTML = p3.id + "." + p3.description + " - $" + p3.price;
+document.getElementById("resize").children[4].innerHTML = p4.id + "." + p4.description + " - $" + p4.price;
+document.getElementById("resize").children[5].innerHTML += p1.price + p2.price + p3.price + p4.price;
+
+
+document.getElementById("maxPrice").innerHTML += p1.id.toString() + " " + p1.type.toUpperCase() + ": " + Math.max(p1.price, p2.price, p3.price, p4.price) + '$  (to exponential ' + p1.price.toExponential() + ")";
+
+document.getElementById("maxValue").innerHTML = "Maximum number value: " + Number.MAX_VALUE;
+
+//validon numrin qe jep shfrytezuesi
+function valido() {
+    var input = document.getElementById("funkMatematikore").value;
+    try {
+        if (isNaN(input)) throw "Not a Number";
+        else if (input < 1) throw "Min value is 1";
+        else if (input > 100) throw "Max value is 100";
+    }
+    catch (err) {
+        window.alert(err);
+        return false;
+    }
+    document.getElementById("1").innerHTML = Math.sqrt(input);
+    document.getElementById("2").innerHTML = Math.PI;
+    document.getElementById("3").innerHTML = Math.sin(input);
+    document.getElementById("4").innerHTML = Math.cos(input);
+
+
+}
+//web workers
+var worker = new Worker("worker.js");
+worker.onmessage = function (event) {
+    document.getElementById("text").innerText = event.data;
+}
+document.getElementById("submit").onclick = function () {
+    document.getElementById("submit").style.opacity = 0.5;
+    document.getElementById("submit").disabled = true;
+    var num = Math.random() * (10000 - 1000) + 1000;
+    console.warn("Number: " + num);
+    worker.postMessage(num);
+
 }
