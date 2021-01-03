@@ -32,6 +32,37 @@
       float: left;
     }
   </style>
+  <script>
+    var values = document.getElementsByClassName('content');
+    function addToCard(index) {
+      for (var i = 0; i < values.length; i++) {
+        if (i == index - 6 - 1) {
+          values[i].childNodes[1].style.display = "none";
+          values[i].childNodes[3].style.display = "block";
+        }
+      }
+      clickCounter(index);
+    }
+    function clickCounter(index) {
+      if (typeof (Storage) !== "undefined") {
+        if (sessionStorage.getItem(index) == "added") {
+          sessionStorage.clickcount = Number(sessionStorage.clickcount);
+        }
+        else if (sessionStorage.clickcount) {
+          sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+        } else {
+          sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result1").innerHTML = "  : " + sessionStorage.clickcount;
+
+
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+      sessionStorage.setItem("" + index, "added");
+
+    }
+  </script>
 </head>
 
 <body>
@@ -85,11 +116,15 @@
   </header>
   <main>
     <div id="change">
+      <div style="position: absolute; top: 250px">
+        <img src="images/cart.png" alt="cart" style="float: left; border: white;">
+        <div id="result1" style="float: left;"></div>
+      </div>
     </div>
     <div class="rreshti">
       <div class="column" id="pr1">
         <div class="content">
-          <button onclick="addToCard(1)"><b>Add to Cart</b></button>
+          <button onclick="addToCard(7)"><b>Add to Cart</b></button>
           <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
@@ -104,7 +139,7 @@
       </div>
       <div class="column" id="pr2">
         <div class="content">
-          <button onclick="addToCard(2)"><b>Add to Cart</b></button>
+          <button onclick="addToCard(8)"><b>Add to Cart</b></button>
           <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
@@ -119,7 +154,7 @@
       </div>
       <div class="column" id="pr3">
         <div class="content">
-          <button onclick="addToCard(3)"><b>Add to Cart</b></button>
+          <button onclick="addToCard(9)"><b>Add to Cart</b></button>
           <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
@@ -134,7 +169,7 @@
       </div>
       <div class="column" id="pr4">
         <div class="content">
-          <button onclick="addToCard(4)"><b>Add to Cart</b></button>
+          <button onclick="addToCard(10)"><b>Add to Cart</b></button>
           <div class="check">&#10004;</div>
           <div id="rating">
             <span class="fa fa-star checked"></span>
@@ -196,16 +231,6 @@
   </footer>
 
   <script>
-    function addToCard(index) {
-      var values = document.getElementsByClassName('content');
-      for (var i = 0; i < values.length; i++) {
-        if (i == index - 1) {
-          values[i].childNodes[1].style.display = "none";
-          values[i].childNodes[3].style.display = "block";
-        }
-      }
-    }
-
     var teGjitha = ["pr1", "pr2", "pr3", "pr4"];
     function Produktet(id, name, price, image, rating) {
       this.id = id;
@@ -225,13 +250,14 @@
     inicializo(2, p3);
     inicializo(3, p4);
 
-
+    //inicializon kartat e produkteve me te dhenat e nevojshme
     function inicializo(i, element) {
       document.getElementById(teGjitha[i]).children[0].children[3].src = element.image;
       document.getElementById(teGjitha[i]).children[0].children[4].innerHTML = element.name;
       document.getElementById(teGjitha[i]).children[0].children[5].innerHTML = '$' + element.price;
     }
 
+    //ndryshon background ne baze te ores
     var currentTime = new Date().getHours();
     if (document.body) {
       if (7 <= currentTime && currentTime < 20) {
@@ -241,6 +267,20 @@
         document.getElementById("change").style.backgroundImage = "url('images/night.jpg')";
       }
     }
+
+    //kontrollon a jane vendosur produktet ne shporte
+    var values = document.getElementsByClassName('content');
+    for (var i = 6; i < 11; i++) {
+      if (sessionStorage.getItem(i + 1) == "added") {
+        values[i - 6].childNodes[1].style.display = "none";
+        values[i - 6].childNodes[3].style.display = "block";
+      }
+    }
+    if (sessionStorage.clickcount >= 1)
+      document.getElementById("result1").innerHTML = "  : " + sessionStorage.clickcount;
+    else
+      document.getElementById("result1").innerHTML = "  : 0";
+
 
   </script>
 </body>
