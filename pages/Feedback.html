@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="Feedback.css">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -64,18 +63,20 @@
         </div>
     </header>
     <main>
-        <form method="GET" action="http://www.randyconnolly.com/tests/process.php" name="forma">
+        <form method="POST" action="#" id="forma" name="form1" onsubmit="return validated()">
             <fieldset>
                 <legend>help us improve</legend>
                 <table id="table1">
                     <tr>
                         <td>
                             <label><i class="fa fa-user"></i> Full Name *</label><br />
-                            <input type="text" name="emri" placeholder="Type your full name ..." autocomplete="on" size="25" required autofocus/>
+                            <input type="text" name="emri" placeholder="Type your full name ..." autocomplete="on"
+                                size="25" required autofocus />
                         </td>
                         <td>
                             <label><i class="fa fa-envelope"></i> Email *</label><br />
-                            <input type="email" name="email" placeholder="dafina@example.com" autocomplete="on" required/>
+                            <input type="text" name="email" placeholder="dafina@example.com" autocomplete="on"
+                                required />
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +112,7 @@
                         </td>
                         <td>
                             <label>Overall, how satisfied are you with our website?</label><br />
-                            <input type="number" min="1" max="10" name="rate" step="1"/>
+                            <input type="number" min="1" max="10" name="rate" step="1" />
                         </td>
                     </tr>
                     <tr>
@@ -213,6 +214,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
+                            <!-- Encryption: <keygen name="security" form="secureform"> -->
                             <input id="sub" type="submit" class="button" disabled="disabled" />
                             <input type="reset" value="Reset" class="button" />
                         </td>
@@ -230,14 +232,14 @@
                     You can contact us at:
                     <br>Tel: +111 1111111
                     <br>Fax: 1111 1111111
-                    <br>Email:darkdelight@domain.com
+                    <br><a id="mail" href="mailto:webmaster@example.com">Email:darkdelight@domain.com</a>
                 </address>
                 </p>
             </div>
             <div class="col2">
                 <h5>QUICK LINKS</h5>
                 <ul>
-                    <li><a href="../DarkDelight.html" target="_blank">Home Page</a></li>
+                    <li><a href="../DarkDelight.html">Home Page</a></li>
                     <li><a href="Lips.html">Shop Lip Products</a></li>
                     <li><a href="Eyes.html">Shop Eye Products</a></li>
                     <li><a href="Face.html">Shop Face Products</a></li>
@@ -246,7 +248,7 @@
             <div class="col2">
                 <h5>FROM THE BLOG</h5>
                 <p><b>Hair Steaming</b><br />
-                    <small>Posted by Doruntina</small>
+                    <small>Posted by <i>Doruntinë</i></small>
                 </p>
                 I've been using the old school technique since the age of 10. But, I'm here to tell you that there's
                 another...<br>
@@ -254,7 +256,7 @@
             </div>
             <div class="col3">
                 <h5>GRAB OUR NEWSLETTER</h5>
-                <form name="form1" action="http://www.randyconnolly.com/tests/process.php" method="POST">
+                <form name="form1" action="#" method="POST">
                     <input type="text" class="input" name="emri" placeholder="Name" />
                     <input type="text" class="input" name="emaili" placeholder="Email" />
                     <input type="submit" class="button" value="SUBMIT" style="cursor: pointer;">
@@ -286,6 +288,21 @@
             var data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
             document.getElementById("sub").disabled = false; // nese e bene drag foton, butoni behet enable
+        }
+        function validated() {
+            var emri = document.forms["form1"]["emri"].value;
+            var patt = /\s/g; //global search
+            var mesazhi;
+            try {
+                if (!patt.test(emri.trim() + "")) throw "Please enter your full name";
+                else if (emri == "") throw "Please enter your name";
+                else if (emri < 4) throw "Please enter your full name";
+
+            }
+            catch (err) {
+                window.alert(err);
+                return false;
+            }
         }
     </script>
 
